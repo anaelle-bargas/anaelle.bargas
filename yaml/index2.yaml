@@ -1,0 +1,99 @@
+-
+  nom_formation: Diplôme National du Brevet
+  etablissement: Collège Georges Braques
+  date_debut: 2016
+  date_fin: 2020
+  lieu: Dieppe, FR
+  contenu_formation: >
+    - programme du collège<br>
+    - musique:chant, solfège, violoncelle(CHAM)
+-
+  nom_formation: Certificat D'Etudes Musicales
+  etablissement: Conservatoire à Rayonnement Départemental Camille Saint Saëns
+  date_debut: 2012
+  date_fin: 2022
+  lieu: Dieppe, FR
+  contenu_formation: >
+    - violoncelle <br>
+    - interprétation de tous types de musiques<br>
+    - solfège<br>
+    - réalisation d'une partition<br>
+    - reconnaissance d'une musique
+
+
+-
+  nom_formation: Baccalauréat Général
+  etablissement: Lycée Pablo Néruda
+  date_debut: 2021
+  date_fin: 2023
+  lieu: Dieppe, FR
+  contenu_formation: >
+    - programme du lycée<br>
+    - Spé 1: Numérique et Sciences Informatiques<br>
+    - Spé 2: Mathématiques<br>
+    - Spé 3: Physique-Chimie<br>
+    - Anglais (Classe Euro avec DNL Mathématiques)<br>
+    - Espagnol
+
+
+-
+  nom_formation: BTS Services Informatiques aux organisations
+  etablissement: Caensup Sainte-Ursule
+  date_debut: 2023
+  date_fin: 2025
+  lieu: Caen, FR
+  contenu_formation: >
+    - HTML / CSS / JS / PHP<br>
+    - JAVA<br>
+    - PYTHON<br>
+    - Support utilisateur<br>
+    - Bases réseau (Protocoles, VM, Routage, Adressage)
+
+-
+  progression: 80%
+
+-
+  progression: 60%
+
+-
+  progression: 85%
+
+-
+  progression: 75%
+
+-
+  progression: 80%
+
+-
+  progression: 90%
+
+-
+  poste_occupé: Coiffeuse Stagiaire
+  entreprise: Franck Provost
+  date_debut: 2020
+  date_fin: 2020
+  lieu: Dieppe, FR
+  taches: >
+   -Nettoyage du salon<br>
+   -Shampoings des clients
+
+-
+  poste_occupé: Opticienne Stagiaire
+  entreprise: Atol mon opticien
+  date_debut: 2020
+  date_fin: 2020
+  lieu: Dieppe, FR
+  taches: >
+   -Participation à l'inventaire<br>
+   -Confection des formes de verres de lunettes<br>
+   -Accueil des clients
+
+-
+  poste_occupé: Hotlineuse / Développeuse
+  entreprise: Léonard Solutions
+  date_debut: 2022
+  date_fin: 2024
+  lieu: Caen, FR
+  taches: >
+   -Développement JS, HTML, CSS, PHP<br>
+   -Réponse aux demandes des clients, assistance
