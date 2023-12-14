@@ -8,46 +8,7 @@ $yamlContent = file_get_contents('./yaml/index2.yaml');
 // Analyser le contenu YAML
 $datas = Yaml::parse($yamlContent);
 
-$info="";
-session_start();
-if(isset($_POST['send'])){
-    extract($_POST);
-    if(isset($nom) && $nom !="" &&
-       isset($message_content) && $message_content !="" &&
-       isset($mail) && $mail !="" &&
-       isset($objet) && $objet !=""){
 
-        $to = "anaelle.bargas@sts-sio-caen.info";
-        $subject = "Vous avez recu un mail du Porte Folio de".$mail  ;
-
-        $message = "
-            <p>message recu de ".$mail."</p>
-            <p>Nom : ".$nom."</p>
-            <p>Objet : ".$objet."</p>
-            <p>Message : ".$message_content."</p>
-
-        ";
-
-        // Always set content-type when sending HTML email
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-        // More headers
-        $headers .= 'From: <'.$mail.'>' . "\r\n";
-        //envoi mail
-        $send = mail($to,$subject,$message,$headers);
-        if($send){
-            $_SESSION['success_message']="message envoyé";
-            $info="Votre message a été envoyé";
-
-        }else{
-            $info="Votre message n'a pas été envoyé, veuillez réessayer ultérieurement.";
-        }
-        //verif envoi
-    }else {
-        $info="Veuillez remplir tous les champs.";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -533,7 +494,7 @@ if(isset($_POST['send'])){
 
         <div id = "contact" onvisible = "actuelle_div(this.id)">
             <div style="margin-top:10%;">
-                <form action="" method="POST">
+                <form action="./php/gestion_mail.php" method="POST">
                     <div id="input_meme_ligne">
                         <input type="text" name="nom" id="name" placeholder="Votre nom">
                         <input type="email" name="mail" id="mail" placeholder="Votre mail">
@@ -543,7 +504,7 @@ if(isset($_POST['send'])){
                     <textarea name="message_content" id="message" cols="30" rows="10" placeholder="Entrez votre message"></textarea>
                     <input type="submit" value="Envoyer" name="send">
                 </form>
-                <p style="font-size:4vmin;"><?=$info?></p>
+                <!-- <p style="font-size:4vmin;"><?=$info?></p> -->
             </div>
             
         </div>
