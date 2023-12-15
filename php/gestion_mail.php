@@ -1,15 +1,20 @@
 <?php
-include_once './../html/ex1/vendor/autoload.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
-use \PHPMailer\PHPMailer\SMTP;
- 
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require './../mail/Exception.php';
+require './../mail/PHPMailer.php';
+require './../mail/SMTP.php';
+
 if(!empty($_POST)) {
- 
+    echo $_POST['name'];
     $mail = new PHPMailer(true);
  
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth = true;                                   //Enable SMTP authentication
@@ -19,17 +24,20 @@ if(!empty($_POST)) {
         $mail->Port = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
  
         //Recipients
-        $mail->setFrom('anaelle.bargas@sts-sio-caen.info', '<span class="search_hit">Mailer</span>');
-        $mail->addAddress($_POST['to']??'anaelle.bargas@sts-sio-caen.info');     //Add a recipient
+        $mail->setFrom($_POST['email'], $_POST['email']);
+        $mail->addAddress('anaelle.bargas@sts-sio-caen.info');     //Add a recipient
  
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = $_POST['subject']??'Subject';
-        $mail->Body = $_POST['body']??'This is the HTML message body <b>in bold!</b>';
+        $mail->Subject = $_POST['objet']??'Subject';
+        $mail->Body = $_POST['message']??'This is the HTML message body <b>in bold!</b>';
  
         $mail->send();
         echo 'Message has been sent';
     } catch (Exception $e) {
-        echo "Message could not be sent. <span class="search_hit">Mailer</span> Error: {$mail->ErrorInfo}";
+        echo "Message could not be sent. <span class='search_hit'>Mailer</span> Error: {$mail->ErrorInfo}";
     }
 }
+
+// header("Location: ./../index.php");
+exit;

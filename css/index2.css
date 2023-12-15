@@ -405,14 +405,15 @@ video{
     background-color: #2130491d;
     /* color:linear-gradient(0.25turn, #3f87a6, #ebf8e1); */
     color:#21304967;
+    /* transition: ease-in-out 5ms; */
+    
     
 }
 
 
-
 #invisible{
     padding: 5%;
-    display: none;
+    /* display: none; */
     flex-direction: column;
     justify-content: center;
     height: 90%;
@@ -424,15 +425,16 @@ video{
     color:#213049;
 }
 #invisible>*, #visible>*{
-    padding-left:5%;
+    padding-left:1.5%;
 }
 #toutes_les_formations>div, #toutes_les_competences>div, #toutes_les_experiences>div{
     border-radius: 15px;
-    min-width: 350px;
-    max-width: 350px;
+    min-width: 455px;
+    max-width: 455px;
     height:65vh;
     padding:15px;
     margin:15px;
+    overflow: hidden;
     box-shadow: 0px 0px 30px rgba(86, 86, 87, 0.652);
 }
 
@@ -504,10 +506,13 @@ input, textarea{
     margin:5%;
     padding:5%;
     font-family: 'Old Standard TT', serif;
-    border-color: #213049;
-    border: solid;
+    border: none;
 }
 
+textarea{
+    padding-top: 5%;
+    padding-left: 5%;
+}
 
 #input_meme_ligne{
     display:flex;
@@ -543,13 +548,29 @@ input, textarea{
 
 
 @keyframes apparition{
+    0%{
+        opacity:0;
+        display:none;
+    }
     100%{
         opacity:1;
         transform:none;
+        display:flex;
     }
 }
 
-
+@keyframes disparition{
+    0%{
+        opacity:1;
+        transform:none;
+        display:flex;
+    }
+    100%{
+        opacity:0;
+        transform:none;
+        display:none;
+    }
+}
 
 @keyframes deplacement_passionnee_qui{
     from{
@@ -569,3 +590,20 @@ input, textarea{
     }
 }
 
+@keyframes display_none{
+    from{
+        display:flex;
+    }
+    to{
+        display:none;
+    }
+}
+
+@keyframes display_flex{
+    from{
+        display:none;
+    }
+    to{
+        display:flex;
+    }
+}

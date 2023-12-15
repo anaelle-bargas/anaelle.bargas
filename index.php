@@ -28,7 +28,7 @@ $datas = Yaml::parse($yamlContent);
 
 
     <body>
-
+        <script>nbClick=0</script>
         <div id = "premiere_vue">
 
             <div id = "gauche">
@@ -268,7 +268,7 @@ $datas = Yaml::parse($yamlContent);
                 
                 <div id = "toutes_les_competences">
                 
-                    <div class="rond" onmouseover="affiche_details(4)" onmouseout="retire_details(4)">
+                    <div class="rond"  onmouseover="affiche_details(4)" onmouseout="retire_details(4)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin;">HTML, CSS</p>
@@ -372,6 +372,41 @@ $datas = Yaml::parse($yamlContent);
 
                         </div>
                     </div>
+
+
+                    <div class="rond" onmouseover="affiche_details(10)" onmouseout="retire_details(10)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" class="title_scroll">ANGLAIS</p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;">Langues</p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><?=$datas[10]["progression"]?></p>
+                            <div id ="pourcentage">
+                                <div style="width:<?=$datas[10]["progression"]?>"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="rond" onmouseover="affiche_details(11)" onmouseout="retire_details(11)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" class="title_scroll">ESPAGNOL</p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;">Langues</p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><?=$datas[11]["progression"]?></p>
+                            <div id ="pourcentage">
+                                <div style="width:<?=$datas[11]["progression"]?>"></div>
+                            </div>
+
+                        </div>
+                    </div>
                     
                </div>
 
@@ -388,63 +423,6 @@ $datas = Yaml::parse($yamlContent);
             <div id= "div_for_scroll">
 
                 <div id = "toutes_les_experiences">
-
-                    <div onmouseover="affiche_details(10)" onmouseout="retire_details(10)">
-                        <div id="visible">
-                            <div>
-                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[10]["poste_occupé"]?></p>
-                            </div>
-                        </div>
-
-                        <div id="invisible">
-                            <div>
-                                <p id="onglet_formations">Entreprise</p>
-                                <p><?=$datas[10]["entreprise"]?></p>
-                            </div>
-                            <div>
-                                <p id="onglet_formations">Date</p>
-                                <p><?=$datas[10]["date_debut"]?> - <?=$datas[10]["date_fin"]?></p>
-                            </div>
-                            <div>
-                                <p id="onglet_formations">Lieu</p>
-                                <p><?=$datas[10]["lieu"]?></p>
-                            </div>
-                            <div>
-                                <p id="onglet_formations">Tâches</p>
-                                <p><?=$datas[10]["taches"]?></p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div onmouseover="affiche_details(11)" onmouseout="retire_details(11)">
-                        <div id="visible">
-                            <div>
-                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[11]["poste_occupé"]?></p>
-                            </div>
-                        </div>
-
-                        <div id="invisible">
-                            <div>
-                                <p id="onglet_formations">Entreprise</p>
-                                <p><?=$datas[11]["entreprise"]?></p>
-                            </div>
-                            <div>
-                                <p id="onglet_formations">Date</p>
-                                <p><?=$datas[11]["date_debut"]?> - <?=$datas[11]["date_fin"]?></p>
-                            </div>
-                            <div>
-                                <p id="onglet_formations">Lieu</p>
-                                <p><?=$datas[11]["lieu"]?></p>
-                            </div>
-                            <div>
-                                <p id="onglet_formations">Tâches</p>
-                                <p><?=$datas[11]["taches"]?></p>
-                            </div>
-
-                        </div>
-                    </div>
-
 
                     <div onmouseover="affiche_details(12)" onmouseout="retire_details(12)">
                         <div id="visible">
@@ -474,6 +452,63 @@ $datas = Yaml::parse($yamlContent);
                         </div>
                     </div>
 
+                    <div onmouseover="affiche_details(13)" onmouseout="retire_details(13)">
+                        <div id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[13]["poste_occupé"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <div>
+                                <p id="onglet_formations">Entreprise</p>
+                                <p><?=$datas[13]["entreprise"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_formations">Date</p>
+                                <p><?=$datas[13]["date_debut"]?> - <?=$datas[13]["date_fin"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_formations">Lieu</p>
+                                <p><?=$datas[13]["lieu"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_formations">Tâches</p>
+                                <p><?=$datas[13]["taches"]?></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div onmouseover="affiche_details(14)" onmouseout="retire_details(14)">
+                        <div id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[14]["poste_occupé"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <div>
+                                <p id="onglet_formations">Entreprise</p>
+                                <p><?=$datas[14]["entreprise"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_formations">Date</p>
+                                <p><?=$datas[14]["date_debut"]?> - <?=$datas[14]["date_fin"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_formations">Lieu</p>
+                                <p><?=$datas[14]["lieu"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_formations">Tâches</p>
+                                <p><?=$datas[14]["taches"]?></p>
+                            </div>
+
+                        </div>
+                    </div>
+
                     <div>
                         <div id="visible" style="background-color:#2130490d">
                             <div>
@@ -481,6 +516,8 @@ $datas = Yaml::parse($yamlContent);
                             </div>
                         </div>
                     </div>
+
+
 
 
                 </div>
@@ -494,16 +531,17 @@ $datas = Yaml::parse($yamlContent);
 
         <div id = "contact" onvisible = "actuelle_div(this.id)">
             <div style="margin-top:10%;">
-                <form action="./php/gestion_mail.php" method="POST">
+                <form id = "monFormulaire">
                     <div id="input_meme_ligne">
-                        <input type="text" name="nom" id="name" placeholder="Votre nom">
-                        <input type="email" name="mail" id="mail" placeholder="Votre mail">
+                        <input type="text" name="name" id="name" placeholder="Votre nom">
+                        <input type="email" name="email" id="email" placeholder="Votre mail">
     
                     </div>
                     <input type="text" name="objet" id="objet" placeholder="Objet">
-                    <textarea name="message_content" id="message" cols="30" rows="10" placeholder="Entrez votre message"></textarea>
-                    <input type="submit" value="Envoyer" name="send">
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Entrez votre message"></textarea>
+                    <input style="cursor:pointer;" type="button" value="Envoyer" onclick="envoyerFormulaire()">
                 </form>
+                <div id="resultat"></div>
                 <!-- <p style="font-size:4vmin;"><?=$info?></p> -->
             </div>
             

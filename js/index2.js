@@ -10,7 +10,7 @@ function agrandir(i){
 
 let dernierDeplacement = 0;
 
-nbClick = 0;
+// nbClick = 0;
 
 
 function onglets_sur_le_cote(){
@@ -36,25 +36,36 @@ function onglets_sur_le_cote(){
 
 function check_qui(){
   document.getElementById("radio_passionnee").checked=false;
-  document.getElementById("paroles").style.animation="deplacement_passionnee_qui 1s 0.0s ease-out forwards";
+  document.getElementById("paroles").style.animation="deplacement_passionnee_qui 1s 0.0s ease-in-out forwards";
 }
 
 function check_passionnee(){
   document.getElementById("radio_qui").checked=false;
-  document.getElementById("paroles").style.animation="deplacement_qui_passionnee 1s 0.0s ease-out forwards";
+  document.getElementById("paroles").style.animation="deplacement_qui_passionnee 1s 0.0s ease-in-out forwards";
 
 }
 
 function affiche_details(i){
-  document.querySelectorAll("#visible")[i].style.display="none";
-  document.querySelectorAll("#invisible")[i].style.display="flex";
+  // document.querySelectorAll("#visible")[i].style.animation="display_none 0.5s 0.0s ease-in-out forwards";
+  // document.querySelectorAll("#invisible")[i].style.animation="display_flex 0.5s 0.0s ease-in-out forwards";
+  document.querySelectorAll("#visible")[i].style.animation="disparition 1s 0.0s ease-in-out forwards";
+  document.querySelectorAll("#invisible")[i].style.animation="apparition 1s 0.0s ease-in-out forwards";
+
+  // document.querySelectorAll("#visible")[i].style.display="none";
+  // document.querySelectorAll("#invisible")[i].style.display="flex";
 
 }
 
 
 function retire_details(i){
-  document.querySelectorAll("#visible")[i].style.display="flex";
-  document.querySelectorAll("#invisible")[i].style.display="none";
+
+  // document.querySelectorAll("#visible")[i].style.animation="display_flex 0.5s 0.0s ease-in-out forwards";
+  // document.querySelectorAll("#invisible")[i].style.animation="display_none 0.5s 0.0s ease-in-out forwards";
+  // document.querySelectorAll("#visible")[i].style.display="flex";
+  // document.querySelectorAll("#invisible")[i].style.display="none";
+  document.querySelectorAll("#visible")[i].style.animation="apparition 1s 0.0s ease-in-out forwards";
+  document.querySelectorAll("#invisible")[i].style.animation="disparition 1s 0.0s ease-in-out forwards";
+
 
 }
 
@@ -92,3 +103,28 @@ window.addEventListener('scroll', function() {
 
 
 
+function envoyerFormulaire(){
+  // Récupérer les données du formulaire
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var objet = document.getElementById("objet").value;
+  var name = document.getElementById("name").value;
+
+  // Créer un objet XMLHttpRequest
+  var xhr = new XMLHttpRequest();
+
+  // Configurer la requête
+  xhr.open("POST", "php/gestion_mail.php", true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  // Définir la fonction de rappel (callback) qui sera appelée lorsque la requête sera terminée
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+          // Afficher la réponse dans la div "resultat"
+          document.getElementById("resultat").innerHTML = xhr.responseText;
+      }
+  };
+
+  // Envoyer la requête avec les données du formulaire
+  xhr.send("email=" + email + "&message=" + message + "&objet=" + objet+ "&name=" + name);
+}
