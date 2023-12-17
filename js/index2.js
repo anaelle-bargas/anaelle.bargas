@@ -1,4 +1,18 @@
-console.log("clic");
+document.addEventListener('keydown', function(event) {
+  // Si les touches Ctrl + R sont pressées simultanément
+  if (event.ctrlKey && event.key === 'r') {
+    // Supprimez l'ancienne ancre de l'URL actuelle, s'il y en a une
+    window.location.href = window.location.href.split('#')[0];
+    
+    // Empêchez le comportement par défaut (rafraîchir la page)
+    event.preventDefault();
+  }
+});
+
+
+if(window.location.href=="http://dev.local/anaelle.bargas/index.php" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
+    document.querySelector('html').style.overflow="hidden";
+}
 function rapetisser(i){
     document.querySelectorAll("#centre_droite>div>div>img")[i].style.height="50%";
     console.log("bla")
@@ -14,22 +28,21 @@ let dernierDeplacement = 0;
 
 
 function onglets_sur_le_cote(){
-  document.querySelector("#centre_droite").style.right="-16%";
-  document.querySelector("#centre_gauche").style.right="-16%";
-  document.querySelector("#centre_gauche").style.position="fixed";
-  document.querySelector("#centre_droite").style.position="fixed";
+  document.querySelector("#centre_droite").style.animation="aller_a_gauche 1s 0.0s ease-in-out forwards";
+  document.querySelector("#centre_gauche").style.animation="aller_a_gauche 1s 0.0s ease-in-out forwards";
+
   nbClick++;
   if(nbClick==1){
-    document.querySelector("#div_formations").classList.add('div_formations');
-    document.querySelector("#div_accueil").classList.add('div_accueil');
-    document.querySelector("#div_competences").classList.add('div_competences');
-    document.querySelector("#div_experiences").classList.add('div_experiences');
-    document.querySelector("#div_contact").classList.add('div_contact');
-    document.querySelector("#div_a_propos").classList.add('div_a_propos');
+    document.querySelector("#div_formations").classList.add('div');
+    document.querySelector("#div_accueil").classList.add('div');
+    document.querySelector("#div_competences").classList.add('div');
+    document.querySelector("#div_experiences").classList.add('div');
+    document.querySelector("#div_contact").classList.add('div');
+    document.querySelector("#div_a_propos").classList.add('div');
     
     
     document.querySelectorAll("#centre_droite>div").forEach((div) => div.style.boxShadow="0px 0px 50px rgba(86, 86, 87, 0.356)");
-    
+    document.querySelector('html').style.overflowY="scroll";
   } 
 }
 
@@ -45,26 +58,20 @@ function check_passionnee(){
 
 }
 
-function affiche_details(i){
-  // document.querySelectorAll("#visible")[i].style.animation="display_none 0.5s 0.0s ease-in-out forwards";
-  // document.querySelectorAll("#invisible")[i].style.animation="display_flex 0.5s 0.0s ease-in-out forwards";
-  document.querySelectorAll("#visible")[i].style.animation="disparition 1s 0.0s ease-in-out forwards";
+function affiche_details(i, width="0", i_pourcentage=0){
+  document.querySelectorAll("#visible")[i].style.animation="disparition 0.3s 0s ease-in-out forwards";
+  document.querySelectorAll("#visible")[i].style.display="none";
   document.querySelectorAll("#invisible")[i].style.animation="apparition 1s 0.0s ease-in-out forwards";
-
-  // document.querySelectorAll("#visible")[i].style.display="none";
-  // document.querySelectorAll("#invisible")[i].style.display="flex";
-
+  document.querySelectorAll("#invisible")[i].style.display="flex";
 }
 
 
 function retire_details(i){
 
-  // document.querySelectorAll("#visible")[i].style.animation="display_flex 0.5s 0.0s ease-in-out forwards";
-  // document.querySelectorAll("#invisible")[i].style.animation="display_none 0.5s 0.0s ease-in-out forwards";
-  // document.querySelectorAll("#visible")[i].style.display="flex";
-  // document.querySelectorAll("#invisible")[i].style.display="none";
-  document.querySelectorAll("#visible")[i].style.animation="apparition 1s 0.0s ease-in-out forwards";
+  document.querySelectorAll("#visible")[i].style.animation="apparition 0.3s 0.0s ease-in-out forwards";
+  document.querySelectorAll("#visible")[i].style.display="flex";
   document.querySelectorAll("#invisible")[i].style.animation="disparition 1s 0.0s ease-in-out forwards";
+  document.querySelectorAll("#invisible")[i].style.display="none";
 
 
 }
@@ -104,6 +111,9 @@ window.addEventListener('scroll', function() {
 
 
 function envoyerFormulaire(){
+  document.querySelector("#resultat").innerHTML="";
+
+
   // Récupérer les données du formulaire
   var email = document.getElementById("email").value;
   var message = document.getElementById("message").value;
@@ -122,9 +132,30 @@ function envoyerFormulaire(){
       if (xhr.readyState == 4 && xhr.status == 200) {
           // Afficher la réponse dans la div "resultat"
           document.getElementById("resultat").innerHTML = xhr.responseText;
+          if(xhr.responseText=="Message has been sent"){
+            document.querySelector("#resultat").style.backgroundColor="#0080004f";
+          }
+          else{
+            document.querySelector("#resultat").style.backgroundColor="rgb(128 0 0 / 37%)";
+
+          }
+
       }
   };
 
   // Envoyer la requête avec les données du formulaire
   xhr.send("email=" + email + "&message=" + message + "&objet=" + objet+ "&name=" + name);
+  
+}
+
+
+nbClickMenu=0;
+function cacher_menu(){
+  if (nbClickMenu%2!=0){
+    document.querySelector("#menu").style.display="none";
+  }
+  else{
+    document.querySelector("#menu").style.display="flex";
+  }
+  nbClickMenu++
 }

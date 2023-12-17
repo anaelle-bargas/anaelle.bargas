@@ -38,7 +38,17 @@ $datas = Yaml::parse($yamlContent);
             </div>
             
             <div id = "centre">
-                
+                <button type="submit" onclick="cacher_menu()">
+                    <img src="./images/menu.png" alt="">
+                </button>
+                <div id="menu">
+                    <a href="#accueil"><p>Accueil</p></a>
+                    <a href="#formations"><p>Parcours de Formation</p></a>
+                    <a href="#competences"><p>Compétences</p></a>
+                    <a href="#experiences"><p>Expériences</p></a>
+                    <a href="#contact"><p>Contact</p></a>
+                    <a href="#a_propos"><p>A propos</p></a>
+                </div>
                 <div id = "centre_gauche"></div>
                 <DIV id = "presentation">
                     <div id = "photo"></div>
@@ -551,7 +561,7 @@ $datas = Yaml::parse($yamlContent);
 
         <div id = "a_propos" onvisible = "actuelle_div(this.id)">
             <img src="fichiers/fotor-ai-2023121011127.jpg" alt="">
-            <p>Je suis étudiante en BTS SIO option SLAM. <br><br>J'ai 18ans, et j'aimerais beaucoup devenir développeuse fullstack. J'aime faire tout ce qui touche au développement infomatique. <br><br>J'aime apprendre de nouvelles choses, et si vous me demandez quelque chose que je ne sais pas encore faire, pas de problèmes, je serai ravie d'apprendre de nouvelles choses et d'augmenter mon champ de compétences! Je travaille avec tout le monde, startup, PME, TPME...</p>
+            <p>Je suis étudiante en BTS SIO option SLAM. <br><br>J'ai 18 ans, et j'aimerais beaucoup devenir développeuse fullstack. J'aime faire tout ce qui touche au développement infomatique. <br><br>J'aime apprendre de nouvelles choses, et si vous me demandez quelque chose que je ne sais pas encore faire, pas de problèmes, je serai ravie d'apprendre de nouvelles choses et d'augmenter mon champ de compétences! Je travaille avec tout le monde, startup, PME, TPME...</p>
         </div>
 
         <script src="js/index2.js"></script>

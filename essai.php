@@ -1,52 +1,23 @@
+<?php
+$largeurDiv = 80 ;// Obtenez la valeur de votre paramètre PHP ici;
+?>
 
+<div id="maDiv" style="width: <?php echo $largeurDiv?>px;height:20px;background-color:#000;" class="animationWidth">
+  <!-- Contenu de la div -->
+</div>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transition Enchantée</title>
-    <style>
-        body{
-            background-color:#000;
-        }
-        #maDiv {
-            background-color:#fff;
-            opacity: 1;
-            max-height: 500px; /* Une valeur suffisamment grande pour couvrir le contenu */
-            overflow: hidden;
-            transition: opacity 1s ease-in-out, max-height 1s ease-in-out; /* Transition de l'opacité et de la hauteur maximale */
-        }
+<button onclick="lancerAnimation()">Lancer l'Animation</button>
+<script>
+function lancerAnimation() {
+  var maDiv = document.getElementById("maDiv");
 
-        .cacher {
-            opacity: 0;
-            max-height: 0;
-        }
-    </style>
-</head>
-<body>
+  // Retirez la classe pour réinitialiser l'animation
+  maDiv.classList.remove("animationWidth");
 
-    <div id="maDiv" class="cacher">
-        <!-- Le contenu de votre div ici -->
-        <p>Ceci est le contenu de la div.</p>
-    </div>
+  // Forcez la mise en file d'attente des changements de style avant de réappliquer la classe
+  void maDiv.offsetWidth;
 
-    <button onclick="toggleVisibility()">Basculer la Visibilité</button>
-
-    <script>
-        function toggleVisibility() {
-            var maDiv = document.getElementById("maDiv");
-            maDiv.classList.toggle("cacher");
-
-            // Ajuster la hauteur dynamiquement
-            if (maDiv.classList.contains("cacher")) {
-                maDiv.style.maxHeight = '0';
-            } else {
-                maDiv.style.maxHeight = '500px'; // Ou une valeur suffisamment grande pour couvrir le contenu
-            }
-        }
-    </script>
-
-</body>
-</html>
-
+  // Réappliquez la classe pour déclencher l'animation
+  maDiv.classList.add("animationWidth");
+}
+</script>
