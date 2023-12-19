@@ -1,14 +1,13 @@
-document.addEventListener('keydown', function(event) {
-  // Si les touches Ctrl + R sont pressées simultanément
-  if (event.ctrlKey && event.key === 'r') {
-    // Supprimez l'ancienne ancre de l'URL actuelle, s'il y en a une
-    window.location.href = window.location.href.split('#')[0];
-    
-    // Empêchez le comportement par défaut (rafraîchir la page)
-    event.preventDefault();
-  }
-});
-
+window.onload = function() {
+    // Écouter les murmures du vent, à savoir l'événement du rechargement de la page
+    window.addEventListener('beforeunload', function() {
+        // Élaborer la destination souhaitée, telle que l'U.R.L. de vos désirs
+        var destination = window.location.href.split('#')[0];
+        
+        // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
+        window.location.href = destination;
+    });
+}
 
 if(window.location.href=="http://dev.local/anaelle.bargas/index.php" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
     document.querySelector('html').style.overflow="hidden";
