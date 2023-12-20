@@ -1,6 +1,8 @@
 window.onload = function() {
+    console.log("wouuuhuuuu")
     // Écouter les murmures du vent, à savoir l'événement du rechargement de la page
     window.addEventListener('beforeunload', function() {
+        console.log("here")
         // Élaborer la destination souhaitée, telle que l'U.R.L. de vos désirs
         var destination = window.location.href.split('#')[0];
         console.log("bla", destination);
