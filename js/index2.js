@@ -7,7 +7,7 @@ window.onload = function() {
         // console.log("bla", destination);
         console.log(window.location.href)
         // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
-        window.location.href = window.location.href.split('#')[0];
+        window.location.href = window.location.href.split('/#')[0];
         console.log(window.location.href)
     });
 }
