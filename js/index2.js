@@ -8,7 +8,7 @@ window.onload = function() {
         window.location.href = destination;
     });
 }
-console.log(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info");
+console.log(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/");
 if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
     console.log("yes");
     document.querySelector('html').style.overflow="hidden";
