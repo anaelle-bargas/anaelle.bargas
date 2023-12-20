@@ -12,7 +12,7 @@ window.onload = function() {
           // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
           window.location.replace(window.location.href.split('#')[0]);
           console.log(window.location.href);
-        }, 0);
+        }, 3);
     });
 }
 console.log(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/");
