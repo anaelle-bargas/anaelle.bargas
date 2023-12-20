@@ -13,6 +13,11 @@ window.onload = function() {
           window.location.replace(window.location.href.split('#')[0]);
           console.log(window.location.href);
         }, 3);
+
+        if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="flex"){
+            console.log("yes");
+            document.querySelector('html').style.overflow="scroll";
+        }
     });
 }
 console.log(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/");
