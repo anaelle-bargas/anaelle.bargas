@@ -3,7 +3,7 @@ window.onload = function() {
     window.addEventListener('beforeunload', function() {
         // Élaborer la destination souhaitée, telle que l'U.R.L. de vos désirs
         var destination = window.location.href.split('#')[0];
-        conosle.log(destination);
+        console.log(destination);
         // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
         window.location.href = destination;
     });
