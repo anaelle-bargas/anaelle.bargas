@@ -8,7 +8,7 @@ window.onload = function() {
         console.log(window.location.href)
         // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
         window.location.href = window.location.href.split('#')[0];
-        console.log(destination, window.location.href)
+        console.log(window.location.href)
     });
 }
 console.log(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/");
