@@ -10,6 +10,7 @@ window.onload = function() {
 }
 
 if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
+    console.log("yes");
     document.querySelector('html').style.overflow="hidden";
 }
 function rapetisser(i){
