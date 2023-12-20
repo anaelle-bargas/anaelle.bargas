@@ -2,13 +2,12 @@ window.onload = function() {
     console.log("wouuuhuuuu")
     // Écouter les murmures du vent, à savoir l'événement du rechargement de la page
     window.addEventListener('beforeunload', function() {
-        console.log("here")
         // Élaborer la destination souhaitée, telle que l'U.R.L. de vos désirs
-        var destination = window.location.href.split('#')[0];
-        console.log("bla", destination);
+        // var destination = window.location.href.split('#')[0];
+        // console.log("bla", destination);
         console.log(window.location.href)
         // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
-        window.location.href = destination;
+        window.location.href = window.location.href.split('#')[0];
         console.log(destination, window.location.href)
     });
 }
