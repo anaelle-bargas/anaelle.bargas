@@ -9,7 +9,7 @@ window.onload = function() {
     });
 }
 
-if(window.location.href=="http://dev.local/anaelle.bargas/index.php" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
+if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
     document.querySelector('html').style.overflow="hidden";
 }
 function rapetisser(i){
