@@ -21,7 +21,7 @@ $datas = Yaml::parse($yamlContent);
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cinzel&family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=Great+Vibes&family=Lobster+Two&family=Noto+Serif:wght@100&family=Old+Standard+TT&family=Unna&family=Bodoni+Moda:opsz@6..96&display=swap" rel="stylesheet">
-        
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfVYjcpAAAAANF06bq2tsBHykVeDO4N_AfuoRGJ"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
@@ -29,6 +29,14 @@ $datas = Yaml::parse($yamlContent);
 
     <body>
         <script>nbClick=0</script>
+        <script>
+          function onClick(e) {
+            e.preventDefault();
+            grecaptcha.enterprise.ready(async () => {
+              const token = await grecaptcha.enterprise.execute('6LfVYjcpAAAAANF06bq2tsBHykVeDO4N_AfuoRGJ', {action: 'LOGIN'});
+            });
+          }
+        </script>
         <div id = "premiere_vue">
 
             <div id = "gauche">
