@@ -541,7 +541,7 @@ $datas = Yaml::parse($yamlContent);
 
         <div id = "contact" onvisible = "actuelle_div(this.id)">
             <div style="margin-top:10%;">
-                <form id = "monFormulaire">
+                <form id = "monFormulaire" method="post">
                     <div id="input_meme_ligne">
                         <input type="text" name="name" id="name" placeholder="Votre nom">
                         <input type="email" name="email" id="email" placeholder="Votre mail">
