@@ -17,7 +17,7 @@ $datas = Yaml::parse($yamlContent);
         <meta charset="utf-8">
         <title>SitePorteFolio</title>        
         <link rel="stylesheet" href="css/index2.css">
-        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcGezgpAAAAANropfNbqRRxP1rlI_B4B0uAt7d-"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cinzel&family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=Great+Vibes&family=Lobster+Two&family=Noto+Serif:wght@100&family=Old+Standard+TT&family=Unna&family=Bodoni+Moda:opsz@6..96&display=swap" rel="stylesheet">
@@ -549,7 +549,11 @@ $datas = Yaml::parse($yamlContent);
                     </div>
                     <input type="text" name="objet" id="objet" placeholder="Objet">
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Entrez votre message"></textarea>
-                    <input style="cursor:pointer;" type="button" value="Envoyer" onclick="envoyerFormulaire()" class="g-recaptcha" data-sitekey="6LcGezgpAAAAANropfNbqRRxP1rlI_B4B0uAt7d-" data-callback='onSubmit' data-action='submit'>
+                    
+                    <div class="g-recaptcha" data-sitekey="6LdJgTgpAAAAAJ0AwHdgVY2smV7A1iEJXXYb77EQ"></div>
+                    <br/>
+                    
+                    <input style="cursor:pointer;" type="button" value="Envoyer" onclick="envoyerFormulaire()">
                 </form>
                 <div id="resultat"></div>
                 <!-- <p style="font-size:4vmin;"><?=$info?></p> -->
