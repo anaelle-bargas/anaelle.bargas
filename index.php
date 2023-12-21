@@ -553,7 +553,7 @@ $datas = Yaml::parse($yamlContent);
                     <div class="g-recaptcha" data-sitekey="6LdJgTgpAAAAAJ0AwHdgVY2smV7A1iEJXXYb77EQ"></div>
                     <br/>
                     
-                    <input style="cursor:pointer;" type="button" value="Envoyer" onclick="envoyerFormulaire()">
+                    <input style="cursor:pointer;" type="button" value="Envoyer" name="ok" onclick="envoyerFormulaire()">
                 </form>
                 <div id="resultat"></div>
                 <!-- <p style="font-size:4vmin;"><?=$info?></p> -->
