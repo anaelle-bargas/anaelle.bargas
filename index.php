@@ -28,6 +28,11 @@ $datas = Yaml::parse($yamlContent);
 
     <body>
         <script>nbClick=0</script>
+        <?php
+        if(isset($_POST['ok'])){
+            
+        }
+        ?>
        
         <div id = "premiere_vue">
 
