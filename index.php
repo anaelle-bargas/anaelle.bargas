@@ -1,5 +1,9 @@
 <?php
 require 'html/ex1/vendor/autoload.php';
+require_once 'recaptcha-master/src/autoload.php';
+
+$secret='6LdJgTgpAAAAAEk2DAExitAnWwfLM_yuvwdkrmgm'
+$recaptcha = new \ReCaptcha\ReCaptcha($secret);
 use Symfony\Component\Yaml\Yaml;
 
 // Charger le contenu du fichier YAML
