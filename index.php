@@ -2,8 +2,7 @@
 require 'html/ex1/vendor/autoload.php';
 require_once 'recaptcha-master/src/autoload.php';
 
-$secret='6LdJgTgpAAAAAEk2DAExitAnWwfLM_yuvwdkrmgm';
-$recaptcha = new \ReCaptcha\ReCaptcha($secret);
+
 use Symfony\Component\Yaml\Yaml;
 
 // Charger le contenu du fichier YAML
@@ -32,11 +31,7 @@ $datas = Yaml::parse($yamlContent);
 
     <body>
         <script>nbClick=0</script>
-        <?php
-        if(isset($_POST['ok'])){
-            
-        }
-        ?>
+        
        
         <div id = "premiere_vue">
 
@@ -550,6 +545,23 @@ $datas = Yaml::parse($yamlContent);
 
         <div id = "contact" onvisible = "actuelle_div(this.id)">
             <div style="margin-top:10%;">
+                <?php
+                    if(isset($_POST['ok'])){
+                        $recaptcha = new \ReCaptcha\ReCaptcha("6LdJgTgpAAAAAEk2DAExitAnWwfLM_yuvwdkrmgm");
+
+                        $gRecaptchaResponse = $_POST['g-recaptcha-response'];
+                        
+                        $resp = $recaptcha->setExpectedHostname('srv1-vm-11103.sts-sio-caen.info')
+                                          ->verify($gRecaptchaResponse, $remoteIp);
+                        if ($resp->isSuccess()) {
+                            echo "Success !";
+                        } else {
+                            $errors = $resp->getErrorCodes();
+                            var_dump($errors);
+                        }
+                    }
+                ?>
+                
                 <form id = "monFormulaire" method="post">
                     <div id="input_meme_ligne">
                         <input type="text" name="name" id="name" placeholder="Votre nom">
