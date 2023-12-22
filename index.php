@@ -18,7 +18,7 @@ $datas = Yaml::parse($yamlContent);
 <html>
     <head>
         <meta charset="utf-8">
-        <title>SitePorteFolio</title>        
+        <title>Anaëlle Bargas</title>        
         <link rel="stylesheet" href="css/index2.css">
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
