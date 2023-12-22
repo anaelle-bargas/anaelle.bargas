@@ -137,6 +137,7 @@ video{
     background-color: white;
     border-top-left-radius: 35px;
     border-bottom-left-radius: 35px;
+    transition: 1s 0.0s ease-in-out;
 }
 
 .div{
