@@ -554,7 +554,7 @@ $datas = Yaml::parse($yamlContent);
                         $resp = $recaptcha->setExpectedHostname('srv1-vm-11103.sts-sio-caen.info')
                                           ->verify($gRecaptchaResponse, $remoteIp);
                         if ($resp->isSuccess()) {
-                            echo "Success !";
+                            echo "<script>console.log('Success !')</script>";
                         } else {
                             $errors = $resp->getErrorCodes();
                             var_dump($errors);
