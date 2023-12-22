@@ -17,11 +17,10 @@ $datas = Yaml::parse($yamlContent);
         <meta charset="utf-8">
         <title>SitePorteFolio</title>        
         <link rel="stylesheet" href="css/index2.css">
-
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cinzel&family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=Great+Vibes&family=Lobster+Two&family=Noto+Serif:wght@100&family=Old+Standard+TT&family=Unna&family=Bodoni+Moda:opsz@6..96&display=swap" rel="stylesheet">
-        
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
@@ -29,6 +28,12 @@ $datas = Yaml::parse($yamlContent);
 
     <body>
         <script>nbClick=0</script>
+        <?php
+        if(isset($_POST['ok'])){
+            
+        }
+        ?>
+       
         <div id = "premiere_vue">
 
             <div id = "gauche">
@@ -59,11 +64,11 @@ $datas = Yaml::parse($yamlContent);
                         <a href="https://www.linkedin.com/in/ana%C3%ABlle-bargas-980911255"><div id = "linkedIn"></div></a>
                     </div>
                 </DIV>
-                <div id = "centre_droite">
+                <div id = "centre_droite" onclick = "onglets_sur_le_cote()" href="#accueil">
                     <div  id = "div_accueil">
                         <a onclick = "onglets_sur_le_cote()" href="#accueil">
-                            <div >
-                                <img src="images/page-daccueil.png" id = "bla" alt="">
+                            <div onclick = "onglets_sur_le_cote()" href="#accueil">
+                                <img onclick = "onglets_sur_le_cote()" href="#accueil" src="images/page-daccueil.png" id = "bla" alt="">
                             </div>
                             <p>Accueil</p>
                         </a>
@@ -541,7 +546,7 @@ $datas = Yaml::parse($yamlContent);
 
         <div id = "contact" onvisible = "actuelle_div(this.id)">
             <div style="margin-top:10%;">
-                <form id = "monFormulaire">
+                <form id = "monFormulaire" method="post">
                     <div id="input_meme_ligne">
                         <input type="text" name="name" id="name" placeholder="Votre nom">
                         <input type="email" name="email" id="email" placeholder="Votre mail">
@@ -549,7 +554,11 @@ $datas = Yaml::parse($yamlContent);
                     </div>
                     <input type="text" name="objet" id="objet" placeholder="Objet">
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Entrez votre message"></textarea>
-                    <input style="cursor:pointer;" type="button" value="Envoyer" onclick="envoyerFormulaire()">
+                    
+                    <div class="g-recaptcha" data-sitekey="6LdJgTgpAAAAAJ0AwHdgVY2smV7A1iEJXXYb77EQ"></div>
+                    <br/>
+                    
+                    <input style="cursor:pointer;" type="button" value="Envoyer" name="ok" onclick="envoyerFormulaire()">
                 </form>
                 <div id="resultat"></div>
                 <!-- <p style="font-size:4vmin;"><?=$info?></p> -->
@@ -565,5 +574,10 @@ $datas = Yaml::parse($yamlContent);
         </div>
 
         <script src="js/index2.js"></script>
+        <script>
+            function onSubmit(token) {
+                document.getElementById("demo-form").submit();
+            }
+        </script>
     </body>
 </html>

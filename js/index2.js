@@ -1,15 +1,29 @@
 window.onload = function() {
+    console.log("wouuuhuuuu")
     // Écouter les murmures du vent, à savoir l'événement du rechargement de la page
     window.addEventListener('beforeunload', function() {
         // Élaborer la destination souhaitée, telle que l'U.R.L. de vos désirs
-        var destination = window.location.href.split('#')[0];
-        
-        // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
-        window.location.href = destination;
+        // var destination = window.location.href.split('#')[0];
+        // console.log("bla", destination);
+        console.log(window.location.href);
+
+        // Différer l'énoncé du décret de redirection
+        setTimeout(function() {
+          // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
+          window.location.replace(window.location.href.split('#')[0]);
+          console.log(window.location.href);
+        }, 3);
+
+        if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="flex"){
+            console.log("yes");
+            document.querySelector('html').style.overflow="scroll";
+        }
     });
 }
 
+console.log(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/");
 if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
+    console.log("yes");
     document.querySelector('html').style.overflow="hidden";
 }
 function rapetisser(i){
