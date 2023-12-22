@@ -63,7 +63,7 @@ $datas = Yaml::parse($yamlContent);
                         <a href="https://www.linkedin.com/in/ana%C3%ABlle-bargas-980911255"><div id = "linkedIn"></div></a>
                     </div>
                 </DIV>
-                <div id = "centre_droite" onclick = "onglets_sur_le_cote()" href="#accueil">
+                <div id = "centre_droite" onclick = "onglets_sur_le_cote()">
                     <div  id = "div_accueil">
                         <a onclick = "onglets_sur_le_cote()" href="#accueil">
                             <div onclick = "onglets_sur_le_cote()" href="#accueil">
