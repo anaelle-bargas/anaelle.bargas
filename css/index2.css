@@ -18,8 +18,6 @@ body{
 
 
 body>div{
-    width:95%;
-    height:101vh;
     display:flex;
     flex-direction: row;
     align-items: center;
