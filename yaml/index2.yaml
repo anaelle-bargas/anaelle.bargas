@@ -5,8 +5,8 @@ formations:
     date_fin: 2020
     lieu: Dieppe, FR
     contenu_formation: >
-    - programme du collège<br>
-    - musique: chant, solfège, violoncelle(CHAM)
+      programme du collège<br>
+      musique: chant, solfège, violoncelle(CHAM)
 
   - nom_formation: Certificat D'Etudes Musicales
     etablissement: Conservatoire à Rayonnement Départemental Camille Saint Saëns
@@ -14,11 +14,11 @@ formations:
     date_fin: 2022
     lieu: Dieppe, FR
     contenu_formation: >
-    - violoncelle <br>
-    - interprétation de tous types de musiques<br>
-    - solfège<br>
-    - réalisation d'une partition<br>
-    - reconnaissance d'une musique
+      violoncelle <br>
+      interprétation de tous types de musiques<br>
+      solfège<br>
+      réalisation d'une partition<br>
+      reconnaissance d'une musique
 
 
 
@@ -28,12 +28,12 @@ formations:
     date_fin: 2023
     lieu: Dieppe, FR
     contenu_formation: >
-    - programme du lycée<br>
-    - Spé 1: Numérique et Sciences Informatiques<br>
-    - Spé 2: Mathématiques<br>
-    - Spé 3: Physique-Chimie<br>
-    - Anglais (Classe Euro avec DNL Mathématiques)<br>
-    - Espagnol
+      programme du lycée<br>
+      Spé 1: Numérique et Sciences Informatiques<br>
+      Spé 2: Mathématiques<br>
+      Spé 3: Physique-Chimie<br>
+      Anglais (Classe Euro avec DNL Mathématiques)<br>
+      Espagnol
 
 
 
@@ -43,11 +43,11 @@ formations:
     date_fin: 2025
     lieu: Caen, FR
     contenu_formation: >
-    - HTML / CSS / JS / PHP<br>
-    - JAVA<br>
-    - PYTHON<br>
-    - Support utilisateur<br>
-    - Bases réseau (Protocoles, VM, Routage, Adressage)
+      HTML / CSS / JS / PHP<br>
+      JAVA<br>
+      PYTHON<br>
+      Support utilisateur<br>
+      Bases réseau (Protocoles, VM, Routage, Adressage)
 
 progressions:
   - taux: 80%
@@ -66,8 +66,8 @@ experiences:
     date_fin: 2020
     lieu: Dieppe, FR
     taches: >
-    -Nettoyage du salon<br>
-    -Shampoings des clients
+      Nettoyage du salon<br>
+      Shampoings des clients
 
 
   - poste_occupé: Opticienne Stagiaire
@@ -76,9 +76,9 @@ experiences:
     date_fin: 2020
     lieu: Dieppe, FR
     taches: >
-    -Participation à l'inventaire<br>
-    -Confection des formes de verres de lunettes<br>
-    -Accueil des clients
+      Participation à l'inventaire<br>
+      Confection des formes de verres de lunettes<br>
+      Accueil des clients
 
 
   - poste_occupé: Hotlineuse / Développeuse
@@ -87,5 +87,5 @@ experiences:
     date_fin: 2024
     lieu: Caen, FR
     taches: >
-    -Développement JS, HTML, CSS, PHP<br>
-    -Réponse aux demandes des clients, assistance
+      Développement JS, HTML, CSS, PHP<br>
+      Réponse aux demandes des clients, assistance

@@ -8,9 +8,22 @@ use Symfony\Component\Yaml\Yaml;
 // Charger le contenu du fichier YAML
 $yamlContent = file_get_contents('./yaml/index2.yaml');
 
-// Analyser le contenu YAML
+
+if ($yamlContent === false) {
+    die("Erreur lors de la lecture du fichier YAML.");
+}
+
 $datas = Yaml::parse($yamlContent);
 
+if ($datas === null) {
+    die("Erreur lors de l'analyse du fichier YAML.");
+}
+
+// Analyser le contenu YAML
+echo "bla";
+// $datas = Yaml::parse($yamlContent);
+echo "bli";
+echo $datas["formations"][0]["nom_formation"];
 
 ?>
 
