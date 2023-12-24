@@ -45,14 +45,14 @@ window.onload = function () {
   });
 
   if(window.location.href=="http://dev.local/anaelle.bargas/index.php" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="flex"){
-      document.querySelector('html').style.overflow="scroll";
+      document.querySelector('html').style.overflowY="scroll";
   }
 
   // Votre code existant ici...
 }
 
 if(window.location.href=="http://dev.local/anaelle.bargas/index.php" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
-    document.querySelector('html').style.overflow="hidden";
+    document.querySelector('html').style.overflowY="hidden";
 }
 function rapetisser(i){
     document.querySelectorAll("#centre_droite>div>div>img")[i].style.height="50%";
