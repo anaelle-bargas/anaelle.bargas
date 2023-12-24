@@ -198,6 +198,7 @@ video{
     flex-direction: row;
     align-items: center;
     margin-top:0px !important;
+    transition:1s 0.0s ease-in-out;
 
 }
 #centre_droite>div>a>div:hover{
