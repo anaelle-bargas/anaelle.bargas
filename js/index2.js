@@ -35,7 +35,7 @@ window.onload = function () {
       sessionStorage.removeItem('isPageReloaded');
 
       // Redirection vers l'URL souhaitée
-      var destination = "http://dev.local/anaelle.bargas/index.php";
+      var destination = window.location.href.split('#')[0];
       window.location.replace(destination);
   }
 
