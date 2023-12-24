@@ -24,7 +24,6 @@
 
 
 window.onload = function () {
-  console.log("wouuuhuuuu");
 
   // Vérifier si la page a été rechargée récemment
   var isPageReloaded = sessionStorage.getItem('isPageReloaded');
@@ -45,17 +44,18 @@ window.onload = function () {
       sessionStorage.setItem('isPageReloaded', 'true');
   });
 
+  if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="flex"){
+      document.querySelector('html').style.overflow="scroll";
+  }
+
   // Votre code existant ici...
 }
 
-console.log(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/");
 if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
-    console.log("yes");
     document.querySelector('html').style.overflow="hidden";
 }
 function rapetisser(i){
     document.querySelectorAll("#centre_droite>div>div>img")[i].style.height="50%";
-    console.log("bla")
 }
 
 function agrandir(i){
@@ -68,12 +68,10 @@ var nbClick = 0;
 
 
 function onglets_sur_le_cote(lien='#formations'){
-  console.log("pas encore fait");
   document.querySelector("#centre_droite").style.animation="aller_a_gauche 0.5s 0.0s ease-in-out forwards";
   document.querySelector("#centre_gauche").style.animation="aller_a_gauche 0.5s 0.0s ease-in-out forwards";
 
   nbClick++;
-  console.log(nbClick)
   if(nbClick==1){
     document.querySelector("#div_formations").classList.add('div');
     document.querySelector("#div_accueil").classList.add('div');
@@ -87,7 +85,6 @@ function onglets_sur_le_cote(lien='#formations'){
     document.querySelector('html').style.overflowY="scroll";
   }
   window.location.replace(lien);
-  console.log("fait");
 }
 
 
@@ -124,9 +121,7 @@ function retire_details(i){
 
 
 
-// function actuelle_div(){
-//   console.log("blouuuuuuuuu")
-// }
+
 
 var actuelle_div=document.getElementById("accueil");
 window.addEventListener('scroll', function() {
