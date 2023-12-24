@@ -50,14 +50,14 @@ formations:
     - Bases réseau (Protocoles, VM, Routage, Adressage)
 
 progressions:
-  - progression: 80%
-  - progression: 60%
-  - progression: 85%
-  - progression: 75%
-  - progression: 80%
-  - progression: 90%
-  - progression: 80%
-  - progression: 50%
+  - taux: 80%
+  - taux: 60%
+  - taux: 85%
+  - taux: 75%
+  - taux: 80%
+  - taux: 90%
+  - taux: 80%
+  - taux: 50%
 
 experiences:
   - poste_occupé: Coiffeuse Stagiaire
