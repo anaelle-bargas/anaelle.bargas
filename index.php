@@ -20,10 +20,6 @@ if ($datas === null) {
 }
 
 // Analyser le contenu YAML
-echo "bla";
-// $datas = Yaml::parse($yamlContent);
-echo "bli";
-echo $datas["formations"][0]["nom_formation"];
 
 ?>
 
