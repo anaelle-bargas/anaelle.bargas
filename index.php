@@ -158,26 +158,26 @@ $datas = Yaml::parse($yamlContent);
                     <div onmouseover="affiche_details(0)" onmouseout="retire_details(0)">
                         <div id="visible">
                             <div>
-                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[0]["nom_formation"]?></p>
+                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas["formations"][0]["nom_formation"]?></p>
                             </div>
                         </div>
 
                         <div id="invisible">
                             <div>
                                 <p id="onglet_formations">Etablissement</p>
-                                <p><?=$datas[0]["etablissement"]?></p>
+                                <p><?=$datas["formations"][0]["etablissement"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Date</p>
-                                <p><?=$datas[0]["date_debut"]?> - <?=$datas[0]["date_fin"]?></p>
+                                <p><?=$datas["formations"][0]["date_debut"]?> - <?=$datas["formations"][0]["date_fin"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Lieu</p>
-                                <p><?=$datas[0]["lieu"]?></p>
+                                <p><?=$datas["formations"][0]["lieu"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Contenu</p>
-                                <p><?=$datas[0]["contenu_formation"]?></p>
+                                <p><?=$datas["formations"][0]["contenu_formation"]?></p>
                             </div>
 
                         </div>
@@ -186,26 +186,26 @@ $datas = Yaml::parse($yamlContent);
                     <div onmouseover="affiche_details(1)" onmouseout="retire_details(1)">
                         <div id="visible">
                             <div>
-                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[1]["nom_formation"]?></p>
+                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas["formations"][1]["nom_formation"]?></p>
                             </div>
                         </div>
 
                         <div id="invisible">
                             <div>
                                 <p id="onglet_formations">Etablissement</p>
-                                <p><?=$datas[1]["etablissement"]?></p>
+                                <p><?=$datas["formations"][1]["etablissement"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Date</p>
-                                <p><?=$datas[1]["date_debut"]?> - <?=$datas[1]["date_fin"]?></p>
+                                <p><?=$datas["formations"][1]["date_debut"]?> - <?=$datas["formations"][1]["date_fin"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Lieu</p>
-                                <p><?=$datas[1]["lieu"]?></p>
+                                <p><?=$datas["formations"][1]["lieu"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Contenu</p>
-                                <p><?=$datas[1]["contenu_formation"]?></p>
+                                <p><?=$datas["formations"][1]["contenu_formation"]?></p>
                             </div>
 
                         </div>
@@ -215,26 +215,26 @@ $datas = Yaml::parse($yamlContent);
                     <div onmouseover="affiche_details(2)" onmouseout="retire_details(2)">
                         <div id="visible">
                             <div>
-                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[2]["nom_formation"]?></p>
+                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas["formations"][2]["nom_formation"]?></p>
                             </div>
                         </div>
 
                         <div id="invisible">
                             <div>
                                 <p id="onglet_formations">Etablissement</p>
-                                <p><?=$datas[2]["etablissement"]?></p>
+                                <p><?=$datas["formations"][2]["etablissement"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Date</p>
-                                <p><?=$datas[2]["date_debut"]?> - <?=$datas[2]["date_fin"]?></p>
+                                <p><?=$datas["formations"][2]["date_debut"]?> - <?=$datas["formations"][2]["date_fin"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Lieu</p>
-                                <p><?=$datas[2]["lieu"]?></p>
+                                <p><?=$datas["formations"][2]["lieu"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Contenu</p>
-                                <p><?=$datas[2]["contenu_formation"]?></p>
+                                <p><?=$datas["formations"][2]["contenu_formation"]?></p>
                             </div>
 
                         </div>
@@ -244,26 +244,26 @@ $datas = Yaml::parse($yamlContent);
                     <div onmouseover="affiche_details(3)" onmouseout="retire_details(3)">
                         <div id="visible">
                             <div>
-                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[3]["nom_formation"]?></p>
+                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas["formations"][3]["nom_formation"]?></p>
                             </div>
                         </div>
 
                         <div id="invisible">
                             <div>
                                 <p id="onglet_formations">Etablissement</p>
-                                <p><?=$datas[3]["etablissement"]?></p>
+                                <p><?=$datas["formations"][3]["etablissement"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Date</p>
-                                <p><?=$datas[3]["date_debut"]?> - <?=$datas[3]["date_fin"]?></p>
+                                <p><?=$datas["formations"][3]["date_debut"]?> - <?=$datas["formations"][3]["date_fin"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Lieu</p>
-                                <p><?=$datas[3]["lieu"]?></p>
+                                <p><?=$datas["formations"][3]["lieu"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Contenu</p>
-                                <p><?=$datas[3]["contenu_formation"]?></p>
+                                <p><?=$datas["formations"][3]["contenu_formation"]?></p>
                             </div>
 
                         </div>
@@ -291,9 +291,9 @@ $datas = Yaml::parse($yamlContent);
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas[4]["progression"]?></p>
+                            <p><?=$datas["progressions"][0]["taux"]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas[4]["progression"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][0]["taux"]?>"></div>
                             </div>
 
                         </div>
@@ -308,9 +308,9 @@ $datas = Yaml::parse($yamlContent);
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas[5]["progression"]?></p>
+                            <p><?=$datas["progressions"][1]["taux"]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas[5]["progression"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][1]["taux"]?>"></div>
                             </div>
 
                         </div>
@@ -326,9 +326,9 @@ $datas = Yaml::parse($yamlContent);
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas[6]["progression"]?></p>
+                            <p><?=$datas["progressions"][2]["taux"]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas[6]["progression"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][2]["taux"]?>"></div>
                             </div>
 
                         </div>
@@ -344,9 +344,9 @@ $datas = Yaml::parse($yamlContent);
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas[7]["progression"]?></p>
+                            <p><?=$datas["progressions"][3]["taux"]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas[7]["progression"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][3]["taux"]?>"></div>
                             </div>
 
                         </div>
@@ -361,9 +361,9 @@ $datas = Yaml::parse($yamlContent);
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas[8]["progression"]?></p>
+                            <p><?=$datas["progressions"][4]["taux"]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas[8]["progression"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][4]["taux"]?>"></div>
                             </div>
                             <a href="https://playground.babylonjs.com/#703K2G">Voir mes 2 mondes BabylonJS</a>
 
@@ -379,9 +379,9 @@ $datas = Yaml::parse($yamlContent);
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas[9]["progression"]?></p>
+                            <p><?=$datas["progressions"][5]["taux"]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas[9]["progression"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][5]["taux"]?>"></div>
                             </div>
 
                         </div>
@@ -397,9 +397,9 @@ $datas = Yaml::parse($yamlContent);
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas[10]["progression"]?></p>
+                            <p><?=$datas["progressions"][6]["taux"]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas[10]["progression"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][6]["taux"]?>"></div>
                             </div>
 
                         </div>
@@ -414,9 +414,9 @@ $datas = Yaml::parse($yamlContent);
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas[11]["progression"]?></p>
+                            <p><?=$datas["progressions"][7]["taux"]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas[11]["progression"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][7]["taux"]?>"></div>
                             </div>
 
                         </div>
@@ -441,26 +441,26 @@ $datas = Yaml::parse($yamlContent);
                     <div onmouseover="affiche_details(12)" onmouseout="retire_details(12)">
                         <div id="visible">
                             <div>
-                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[12]["poste_occupé"]?></p>
+                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas["experiences"][0]["poste_occupé"]?></p>
                             </div>
                         </div>
 
                         <div id="invisible">
                             <div>
                                 <p id="onglet_formations">Entreprise</p>
-                                <p><?=$datas[12]["entreprise"]?></p>
+                                <p><?=$datas["experiences"][0]["entreprise"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Date</p>
-                                <p><?=$datas[12]["date_debut"]?> - <?=$datas[12]["date_fin"]?></p>
+                                <p><?=$datas["experiences"][0]["date_debut"]?> - <?=$datas["experiences"][0]["date_fin"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Lieu</p>
-                                <p><?=$datas[12]["lieu"]?></p>
+                                <p><?=$datas["experiences"][0]["lieu"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Tâches</p>
-                                <p><?=$datas[12]["taches"]?></p>
+                                <p><?=$datas["experiences"][0]["taches"]?></p>
                             </div>
 
                         </div>
@@ -469,26 +469,26 @@ $datas = Yaml::parse($yamlContent);
                     <div onmouseover="affiche_details(13)" onmouseout="retire_details(13)">
                         <div id="visible">
                             <div>
-                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[13]["poste_occupé"]?></p>
+                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas["experiences"][1]["poste_occupé"]?></p>
                             </div>
                         </div>
 
                         <div id="invisible">
                             <div>
                                 <p id="onglet_formations">Entreprise</p>
-                                <p><?=$datas[13]["entreprise"]?></p>
+                                <p><?=$datas["experiences"][1]["entreprise"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Date</p>
-                                <p><?=$datas[13]["date_debut"]?> - <?=$datas[13]["date_fin"]?></p>
+                                <p><?=$datas["experiences"][1]["date_debut"]?> - <?=$datas["experiences"][1]["date_fin"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Lieu</p>
-                                <p><?=$datas[13]["lieu"]?></p>
+                                <p><?=$datas["experiences"][1]["lieu"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Tâches</p>
-                                <p><?=$datas[13]["taches"]?></p>
+                                <p><?=$datas["experiences"][1]["taches"]?></p>
                             </div>
 
                         </div>
@@ -498,26 +498,26 @@ $datas = Yaml::parse($yamlContent);
                     <div onmouseover="affiche_details(14)" onmouseout="retire_details(14)">
                         <div id="visible">
                             <div>
-                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas[14]["poste_occupé"]?></p>
+                                <p id="onglet_formations" style="font-size:7vmin"><?=$datas["experiences"][2]["poste_occupé"]?></p>
                             </div>
                         </div>
 
                         <div id="invisible">
                             <div>
                                 <p id="onglet_formations">Entreprise</p>
-                                <p><?=$datas[14]["entreprise"]?></p>
+                                <p><?=$datas["experiences"][2]["entreprise"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Date</p>
-                                <p><?=$datas[14]["date_debut"]?> - <?=$datas[14]["date_fin"]?></p>
+                                <p><?=$datas["experiences"][2]["date_debut"]?> - <?=$datas["experiences"][2]["date_fin"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Lieu</p>
-                                <p><?=$datas[14]["lieu"]?></p>
+                                <p><?=$datas["experiences"][2]["lieu"]?></p>
                             </div>
                             <div>
                                 <p id="onglet_formations">Tâches</p>
-                                <p><?=$datas[14]["taches"]?></p>
+                                <p><?=$datas["experiences"][2]["taches"]?></p>
                             </div>
 
                         </div>
