@@ -1,5 +1,5 @@
 html{
-    width:102%;
+    max-width:102%;
     height:102vh;
     margin-top: -10px;
     margin-left:-10px;
@@ -7,7 +7,7 @@ html{
     overflow-y:scroll;
 }
 body{
-    width:102%;
+    max-width:102%;
     height:auto;
     display:flex;
     flex-direction: column;
@@ -321,6 +321,7 @@ video{
     justify-content: center;
     flex-direction: column;
     color:#213049;
+    overflow:hidden;
 }
 
 #accueil>div{
