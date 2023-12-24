@@ -168,7 +168,7 @@ video{
     opacity:0px;
     background-color: white;
     animation : apparition 1s 0.0s ease-out forwards, apparition_droite 1s 0.0s ease-out forwards;
-    transition: background-color 1s 0.0s ease-in-out;
+    transition: background-color 0.1s 0.0s ease-in-out;
 }
 #centre_droite>div>a>p, #menu>a>p{
     padding-left: 5%;
