@@ -112,9 +112,6 @@ video{
     width:auto;
     transition:height 0.1s, width 0.1s;
 }
-#centre>button>img:hover{
-    /* height:20px; */
-}
 
 
 #centre_gauche, #centre_droite{
@@ -137,7 +134,7 @@ video{
     background-color: white;
     border-top-left-radius: 35px;
     border-bottom-left-radius: 35px;
-    transition: 1s 0.0s ease-in-out;
+    transition: 0.5s 0.0s ease-in-out;
 }
 
 .div{
@@ -171,7 +168,7 @@ video{
     opacity:0px;
     background-color: white;
     animation : apparition 1s 0.0s ease-out forwards, apparition_droite 1s 0.0s ease-out forwards;
-    transition: background-color 0.1s ease-in-out;
+    transition: background-color 1s 0.0s ease-in-out;
 }
 #centre_droite>div>a>p, #menu>a>p{
     padding-left: 5%;
@@ -180,7 +177,7 @@ video{
     /* padding-right: 500px; */
     color: #213049;
     opacity: 0;
-    animation: apparition 0.8s 1s ease-out forwards;
+    animation: apparition 0.5s 1s ease-out forwards;
     width: 500px;
 }
 #menu>a>p{
@@ -198,7 +195,7 @@ video{
     flex-direction: row;
     align-items: center;
     margin-top:0px !important;
-    transition:1s 0.0s ease-in-out;
+    transition:0.5s 0.0s ease-in-out;
 
 }
 #centre_droite>div>a>div:hover{

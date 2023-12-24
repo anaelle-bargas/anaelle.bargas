@@ -1,3 +1,25 @@
+moi:
+  nom : Anaëlle Bargas
+  metier : Développeuse
+  accueil_title : Bienvenue
+  accueil_p1 : Je suis Anaëlle Bargas, développeuse back-end, basée à Caen, en France.
+  accueil_p2 : Vous cherchez quelqu'un qui vous accompagnera dans votre projet informatique?
+  accueil_p3 : Ne cherchez plus, vous l'avez trouvé!
+
+menu :
+  - Accueil
+  - Parcours de Formation
+  - Compétences
+  - Expériences
+  - Contact
+  - A propos
+
+onglets_formations :
+  - Etablissement
+  - Date
+  - Lieu
+  - Contenu
+
 formations:
   - nom_formation: Diplôme National du Brevet
     etablissement: Collège Georges Braques
@@ -50,14 +72,14 @@ formations:
       Bases réseau (Protocoles, VM, Routage, Adressage)
 
 progressions:
-  - taux: 80%
-  - taux: 60%
-  - taux: 85%
-  - taux: 75%
-  - taux: 80%
-  - taux: 90%
-  - taux: 80%
-  - taux: 50%
+  - 80%
+  - 60%
+  - 85%
+  - 75%
+  - 80%
+  - 90%
+  - 80%
+  - 50%
 
 experiences:
   - poste_occupé: Coiffeuse Stagiaire

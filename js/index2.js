@@ -1,24 +1,51 @@
-window.onload = function() {
-    console.log("wouuuhuuuu")
-    // Écouter les murmures du vent, à savoir l'événement du rechargement de la page
-    window.addEventListener('beforeunload', function() {
-        // Élaborer la destination souhaitée, telle que l'U.R.L. de vos désirs
-        // var destination = window.location.href.split('#')[0];
-        // console.log("bla", destination);
-        console.log(window.location.href);
+// window.onload = function() {
+//     console.log("wouuuhuuuu")
+//     // Écouter les murmures du vent, à savoir l'événement du rechargement de la page
+//     window.addEventListener('beforeunload', function() {
+//         // Élaborer la destination souhaitée, telle que l'U.R.L. de vos désirs
+//         // var destination = window.location.href.split('#')[0];
+//         // console.log("bla", destination);
+//         console.log(window.location.href);
 
-        // Différer l'énoncé du décret de redirection
-        setTimeout(function() {
-          // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
-          window.location.replace(window.location.href.split('#')[0]);
-          console.log(window.location.href);
-        }, 3);
+//         // Différer l'énoncé du décret de redirection
+//         setTimeout(function() {
+//           window.location.replace(window.location.href.split('#')[0]);
+//           // Énoncer le décret pour conduire l'usager vers la destinée prédéfinie
+//           console.log(window.location.href);
+//         }, 3);
 
-        if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="flex"){
-            console.log("yes");
-            document.querySelector('html').style.overflow="scroll";
-        }
-    });
+//         if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="flex"){
+//             console.log("yes");
+//             document.querySelector('html').style.overflow="scroll";
+//         }
+//     });
+// }
+
+
+
+window.onload = function () {
+  console.log("wouuuhuuuu");
+
+  // Vérifier si la page a été rechargée récemment
+  var isPageReloaded = sessionStorage.getItem('isPageReloaded');
+
+  // Si la page a été rechargée, effectuer la redirection
+  if (isPageReloaded) {
+      // Effacer le marqueur de rechargement pour éviter une nouvelle redirection
+      sessionStorage.removeItem('isPageReloaded');
+
+      // Redirection vers l'URL souhaitée
+      var destination = "http://dev.local/anaelle.bargas/index.php";
+      window.location.replace(destination);
+  }
+
+  // Écouter les murmures du vent, à savoir l'événement du rechargement de la page
+  window.addEventListener('beforeunload', function () {
+      // Marquer la page comme rechargée avant de la décharger
+      sessionStorage.setItem('isPageReloaded', 'true');
+  });
+
+  // Votre code existant ici...
 }
 
 console.log(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/");
@@ -37,14 +64,16 @@ function agrandir(i){
 
 let dernierDeplacement = 0;
 
-// nbClick = 0;
+var nbClick = 0;
 
 
-function onglets_sur_le_cote(){
-  document.querySelector("#centre_droite").style.animation="aller_a_gauche 1s 0.0s ease-in-out forwards";
-  document.querySelector("#centre_gauche").style.animation="aller_a_gauche 1s 0.0s ease-in-out forwards";
+function onglets_sur_le_cote(lien='#formations'){
+  console.log("pas encore fait");
+  document.querySelector("#centre_droite").style.animation="aller_a_gauche 0.5s 0.0s ease-in-out forwards";
+  document.querySelector("#centre_gauche").style.animation="aller_a_gauche 0.5s 0.0s ease-in-out forwards";
 
   nbClick++;
+  console.log(nbClick)
   if(nbClick==1){
     document.querySelector("#div_formations").classList.add('div');
     document.querySelector("#div_accueil").classList.add('div');
@@ -56,7 +85,9 @@ function onglets_sur_le_cote(){
     
     document.querySelectorAll("#centre_droite>div").forEach((div) => div.style.boxShadow="0px 0px 50px rgba(86, 86, 87, 0.356)");
     document.querySelector('html').style.overflowY="scroll";
-  } 
+  }
+  window.location.replace(lien);
+  console.log("fait");
 }
 
 

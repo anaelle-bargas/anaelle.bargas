@@ -27,7 +27,7 @@ if ($datas === null) {
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Anaëlle Bargas</title>        
+        <title><?=$datas["moi"]["nom"]?></title>        
         <link rel="stylesheet" href="css/index2.css">
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@ if ($datas === null) {
 
 
     <body>
-        <script>nbClick=0</script>
+        <!-- <script>nbCli</script> -->
         
        
         <div id = "premiere_vue">
@@ -55,38 +55,38 @@ if ($datas === null) {
                     <img src="./images/menu.png" alt="">
                 </button>
                 <div id="menu">
-                    <a href="#accueil"><p>Accueil</p></a>
-                    <a href="#formations"><p>Parcours de Formation</p></a>
-                    <a href="#competences"><p>Compétences</p></a>
-                    <a href="#experiences"><p>Expériences</p></a>
-                    <a href="#contact"><p>Contact</p></a>
-                    <a href="#a_propos"><p>A propos</p></a>
+                    <a href="#accueil"><p><?=$datas["menu"][0]?></p></a>
+                    <a href="#formations"><p><?=$datas["menu"][1]?></p></a>
+                    <a href="#competences"><p><?=$datas["menu"][2]?></p></a>
+                    <a href="#experiences"><p><?=$datas["menu"][3]?></p></a>
+                    <a href="#contact"><p><?=$datas["menu"][4]?></p></a>
+                    <a href="#a_propos"><p><?=$datas["menu"][5]?></p></a>
                 </div>
                 <div id = "centre_gauche"></div>
                 <DIV id = "presentation">
                     <div id = "photo"></div>
-                    <p id = "nom">Anaëlle Bargas</p>
+                    <p id = "nom"><?=$datas["moi"]["nom"]?></p>
                     <p id ="ligne">________</p>
-                    <p id = "metier">Développeuse</p>
+                    <p id = "metier"><?=$datas["moi"]["metier"]?></p>
                     <div id = "reseaux_presentation">
                         <a href="https://www.linkedin.com/in/ana%C3%ABlle-bargas-980911255"><div id = "linkedIn"></div></a>
                     </div>
                 </DIV>
-                <div id = "centre_droite" onclick = "onglets_sur_le_cote()">
-                    <div  id = "div_accueil">
-                        <a onclick = "onglets_sur_le_cote()" href="#accueil">
-                            <div onclick = "onglets_sur_le_cote()" href="#accueil">
-                                <img onclick = "onglets_sur_le_cote()" href="#accueil" src="images/page-daccueil.png" id = "bla" alt="">
+                <div id = "centre_droite">
+                    <div onclick = "onglets_sur_le_cote('#accueil')" id = "div_accueil">
+                        <a href="#accueil">
+                            <div>
+                                <img src="images/page-daccueil.png" id = "bla" alt="">
                             </div>
-                            <p>Accueil</p>
+                            <p><?=$datas["menu"][0]?></p>
                         </a>
                     </div>
-                    <div id = "div_formations">
+                    <div id = "div_formations" onclick = "onglets_sur_le_cote()">
                         <a onclick = "onglets_sur_le_cote()" href="#formations">
                             <div >
                                 <img src="images/education.png" id = "bla" alt="">
                             </div>
-                            <p>Parcours de formation</p>
+                            <p><?=$datas["menu"][1]?></p>
                         </a>
                     </div>
                     <div id = "div_competences">
@@ -94,7 +94,7 @@ if ($datas === null) {
                             <div >
                                 <img src="images/competence.png" id = "bla" alt="">
                             </div>
-                            <p>Compétences</p>
+                            <p><?=$datas["menu"][2]?></p>
                         </a>
                     </div>
                     
@@ -103,7 +103,7 @@ if ($datas === null) {
                             <div >
                                 <img src="images/mallette.png" id = "bla" alt="">
                             </div>
-                            <p>Expériences</p>
+                            <p><?=$datas["menu"][3]?></p>
                         </a>
                     </div>
                     
@@ -112,7 +112,7 @@ if ($datas === null) {
                             <div >
                                 <img src="images/e-mail.png" id = "bla" alt="">
                             </div>
-                            <p>Contact</p>
+                            <p><?=$datas["menu"][4]?></p>
                         </a>
                     </div>
                     
@@ -121,7 +121,7 @@ if ($datas === null) {
                             <div >
                                 <img src="images/a-propos-de-nous (1).png" id = "bla" alt="">
                             </div>
-                            <p>A propos</p>
+                            <p><?=$datas["menu"][5]?></p>
                         </a>
                     </div>
                 </div>
@@ -138,14 +138,14 @@ if ($datas === null) {
                     
             <div id = "paroles">
                 <div id = "qui">
-                    <p id = "title">Bienvenue</p>
-                    <p>Je suis Anaëlle Bargas, développeuse back-end, basée à Caen, en France. </p>
+                    <p id = "title"><?=$datas["moi"]["accueil_title"]?></p>
+                    <p><?=$datas["moi"]["accueil_p1"]?></p>
     
                 </div>
     
                 <div id = "passionnee" style="display:flex;">
-                    <p>Vous cherchez quelqu'un qui vous accompagnera dans votre projet informatique?</p>
-                    <p>Ne cherchez plus, vous l'avez trouvé!</p>
+                    <p><?=$datas["moi"]["accueil_p2"]?></p>
+                    <p><?=$datas["moi"]["accueil_p3"]?></p>
                 </div>
             </div>
 
@@ -173,19 +173,19 @@ if ($datas === null) {
 
                         <div id="invisible">
                             <div>
-                                <p id="onglet_formations">Etablissement</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][0]?></p>
                                 <p><?=$datas["formations"][0]["etablissement"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Date</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][1]?></p>
                                 <p><?=$datas["formations"][0]["date_debut"]?> - <?=$datas["formations"][0]["date_fin"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Lieu</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][2]?></p>
                                 <p><?=$datas["formations"][0]["lieu"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Contenu</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][3]?></p>
                                 <p><?=$datas["formations"][0]["contenu_formation"]?></p>
                             </div>
 
@@ -201,19 +201,19 @@ if ($datas === null) {
 
                         <div id="invisible">
                             <div>
-                                <p id="onglet_formations">Etablissement</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][0]?></p>
                                 <p><?=$datas["formations"][1]["etablissement"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Date</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][1]?></p>
                                 <p><?=$datas["formations"][1]["date_debut"]?> - <?=$datas["formations"][1]["date_fin"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Lieu</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][2]?></p>
                                 <p><?=$datas["formations"][1]["lieu"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Contenu</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][3]?></p>
                                 <p><?=$datas["formations"][1]["contenu_formation"]?></p>
                             </div>
 
@@ -230,19 +230,19 @@ if ($datas === null) {
 
                         <div id="invisible">
                             <div>
-                                <p id="onglet_formations">Etablissement</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][0]?></p>
                                 <p><?=$datas["formations"][2]["etablissement"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Date</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][1]?></p>
                                 <p><?=$datas["formations"][2]["date_debut"]?> - <?=$datas["formations"][2]["date_fin"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Lieu</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][2]?></p>
                                 <p><?=$datas["formations"][2]["lieu"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Contenu</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][3]?></p>
                                 <p><?=$datas["formations"][2]["contenu_formation"]?></p>
                             </div>
 
@@ -259,19 +259,19 @@ if ($datas === null) {
 
                         <div id="invisible">
                             <div>
-                                <p id="onglet_formations">Etablissement</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][0]?></p>
                                 <p><?=$datas["formations"][3]["etablissement"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Date</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][1]?></p>
                                 <p><?=$datas["formations"][3]["date_debut"]?> - <?=$datas["formations"][3]["date_fin"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Lieu</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][2]?></p>
                                 <p><?=$datas["formations"][3]["lieu"]?></p>
                             </div>
                             <div>
-                                <p id="onglet_formations">Contenu</p>
+                                <p id="onglet_formations"><?=$datas["onglets_formations"][3]?></p>
                                 <p><?=$datas["formations"][3]["contenu_formation"]?></p>
                             </div>
 
@@ -281,7 +281,7 @@ if ($datas === null) {
                </div>
 
                     
-            </div>
+            </div> 
 
         </div>
 
@@ -300,9 +300,9 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas["progressions"][0]["taux"]?></p>
+                            <p><?=$datas["progressions"][0]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas["progressions"][0]["taux"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][0]?>"></div>
                             </div>
 
                         </div>
@@ -317,9 +317,9 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas["progressions"][1]["taux"]?></p>
+                            <p><?=$datas["progressions"][1]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas["progressions"][1]["taux"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][1]?>"></div>
                             </div>
 
                         </div>
@@ -335,9 +335,9 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas["progressions"][2]["taux"]?></p>
+                            <p><?=$datas["progressions"][2]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas["progressions"][2]["taux"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][2]?>"></div>
                             </div>
 
                         </div>
@@ -353,9 +353,9 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas["progressions"][3]["taux"]?></p>
+                            <p><?=$datas["progressions"][3]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas["progressions"][3]["taux"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][3]?>"></div>
                             </div>
 
                         </div>
@@ -370,9 +370,9 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas["progressions"][4]["taux"]?></p>
+                            <p><?=$datas["progressions"][4]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas["progressions"][4]["taux"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][4]?>"></div>
                             </div>
                             <a href="https://playground.babylonjs.com/#703K2G">Voir mes 2 mondes BabylonJS</a>
 
@@ -388,9 +388,9 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas["progressions"][5]["taux"]?></p>
+                            <p><?=$datas["progressions"][5]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas["progressions"][5]["taux"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][5]?>"></div>
                             </div>
 
                         </div>
@@ -406,9 +406,9 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas["progressions"][6]["taux"]?></p>
+                            <p><?=$datas["progressions"][6]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas["progressions"][6]["taux"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][6]?>"></div>
                             </div>
 
                         </div>
@@ -423,9 +423,9 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><?=$datas["progressions"][7]["taux"]?></p>
+                            <p><?=$datas["progressions"][7]?></p>
                             <div id ="pourcentage">
-                                <div style="width:<?=$datas["progressions"][7]["taux"]?>"></div>
+                                <div style="width:<?=$datas["progressions"][7]?>"></div>
                             </div>
 
                         </div>
