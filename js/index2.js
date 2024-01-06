@@ -44,14 +44,15 @@ window.onload = function () {
       sessionStorage.setItem('isPageReloaded', 'true');
   });
 
-  if(window.location.href=="http://dev.local/anaelle.bargas/index.php" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="flex"){
+  if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="flex"){
+      console.log("bla");
       document.querySelector('html').style.overflowY="scroll";
   }
 
   // Votre code existant ici...
 }
 
-if(window.location.href=="http://dev.local/anaelle.bargas/index.php" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
+if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
     document.querySelector('html').style.overflowY="hidden";
 }
 function rapetisser(i){
