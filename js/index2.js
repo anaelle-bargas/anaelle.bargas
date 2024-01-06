@@ -47,13 +47,17 @@ window.onload = function () {
   if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="flex"){
       console.log("bla");
       document.querySelector('html').style.overflowY="scroll";
+      document.querySelector('#formations').style.width="100% !important";
+      document.querySelector('#competences').style.width="100% !important";
+      document.querySelector('#experiences').style.width="100% !important";
   }
 
   // Votre code existant ici...
 }
 
 if(window.location.href=="http://srv1-vm-11103.sts-sio-caen.info/" && window.getComputedStyle(document.querySelector("#centre>button")).getPropertyValue("display")=="none"){
-    document.querySelector('html').style.overflowY="hidden";
+      console.log("blabli");
+      document.querySelector('html').style.overflowY="hidden";
 }
 function rapetisser(i){
     document.querySelectorAll("#centre_droite>div>div>img")[i].style.height="50%";
