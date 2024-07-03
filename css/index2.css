@@ -383,7 +383,7 @@ video{
 
 
 
-#formations, #competences, #experiences{
+#formations, #competences, #experiences, #projets{
     display:flex;
     align-items: center;
     justify-content: flex-start;
@@ -406,7 +406,7 @@ video{
     align-items: center; */
     justify-content: flex-start;
 }
-#toutes_les_formations, #toutes_les_competences, #toutes_les_experiences{
+#toutes_les_formations, #toutes_les_competences, #toutes_les_experiences, #tous_les_projets{
     height:auto;
     width:120%;
     padding: 4%;
@@ -454,7 +454,7 @@ video{
 #invisible>*, #visible>*{
     padding-left:1.5%;
 }
-#toutes_les_formations>div, #toutes_les_competences>div, #toutes_les_experiences>div{
+#toutes_les_formations>div, #toutes_les_competences>div, #toutes_les_experiences>div, #tous_les_projets>div{
     border-radius: 15px;
     min-width: 455px;
     max-width: 455px;
@@ -467,7 +467,7 @@ video{
 
 
 
-#toutes_les_formations>div>div>p, #toutes_les_competences>div>div>p, #toutes_les_experiences>div>div>p{
+#toutes_les_formations>div>div>p, #toutes_les_competences>div>div>p, #toutes_les_experiences>div>div>p, #tous_les_projets>div>div>p{
     margin:2%;
 }
 

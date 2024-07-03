@@ -10,6 +10,7 @@ menu :
   - Accueil
   - Parcours de Formation
   - Compétences
+  - Projets
   - Expériences
   - Contact
   - A propos
@@ -80,6 +81,18 @@ progressions:
   - 90%
   - 80%
   - 50%
+
+
+projets:
+  - nom: Deux Mondes
+    domaine: Babylon JS
+    lien: https://playground.babylonjs.com/#703K2G#2
+  - nom: Diplome
+    domaine: Babylon JS
+    lien: https://playground.babylonjs.com/#EHFF0X#7
+  - nom: Temple de Jérusalem
+    lien: https://playground.babylonjs.com/#F8EJ0Z#70
+    domaine: Babylon JS
 
 experiences:
   - poste_occupé: Coiffeuse Stagiaire

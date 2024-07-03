@@ -49,6 +49,7 @@ window.onload = function () {
       document.querySelector('html').style.overflowY="scroll";
       document.querySelector('#formations').style.width="100% !important";
       document.querySelector('#competences').style.width="100% !important";
+      document.querySelector('#projets').style.width="100% !important";
       document.querySelector('#experiences').style.width="100% !important";
   }
 
@@ -84,6 +85,10 @@ function onglets_sur_le_cote(lien='#formations'){
     document.querySelector("#div_experiences").classList.add('div');
     document.querySelector("#div_contact").classList.add('div');
     document.querySelector("#div_a_propos").classList.add('div');
+
+    //TODO
+    document.querySelector("#div_projets").classList.add('div');
+    //TODO
     
     
     document.querySelectorAll("#centre_droite>div").forEach((div) => div.style.boxShadow="0px 0px 50px rgba(86, 86, 87, 0.356)");

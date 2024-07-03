@@ -58,9 +58,10 @@ if ($datas === null) {
                     <a href="#accueil"><p><?=$datas["menu"][0]?></p></a>
                     <a href="#formations"><p><?=$datas["menu"][1]?></p></a>
                     <a href="#competences"><p><?=$datas["menu"][2]?></p></a>
-                    <a href="#experiences"><p><?=$datas["menu"][3]?></p></a>
-                    <a href="#contact"><p><?=$datas["menu"][4]?></p></a>
-                    <a href="#a_propos"><p><?=$datas["menu"][5]?></p></a>
+                    <a href="#projets"><p><?=$datas["menu"][3]?></p></a>
+                    <a href="#experiences"><p><?=$datas["menu"][4]?></p></a>
+                    <a href="#contact"><p><?=$datas["menu"][5]?></p></a>
+                    <a href="#a_propos"><p><?=$datas["menu"][6]?></p></a>
                 </div>
                 <div id = "centre_gauche"></div>
                 <DIV id = "presentation">
@@ -97,13 +98,23 @@ if ($datas === null) {
                             <p><?=$datas["menu"][2]?></p>
                         </a>
                     </div>
+                    <!-- TODO -->
+                    <div id = "div_projets">                    
+                        <a onclick = "onglets_sur_le_cote()" href="#projets">
+                            <div >
+                                <img src="images/projets.png" id = "bla" alt="">
+                            </div>
+                            <p><?=$datas["menu"][3]?></p>
+                        </a>
+                    </div>
+                    <!-- TODO -->
                     
                     <div id = "div_experiences">
                         <a onclick = "onglets_sur_le_cote()" href="#experiences">
                             <div >
                                 <img src="images/mallette.png" id = "bla" alt="">
                             </div>
-                            <p><?=$datas["menu"][3]?></p>
+                            <p><?=$datas["menu"][4]?></p>
                         </a>
                     </div>
                     
@@ -112,7 +123,7 @@ if ($datas === null) {
                             <div >
                                 <img src="images/e-mail.png" id = "bla" alt="">
                             </div>
-                            <p><?=$datas["menu"][4]?></p>
+                            <p><?=$datas["menu"][5]?></p>
                         </a>
                     </div>
                     
@@ -121,7 +132,7 @@ if ($datas === null) {
                             <div >
                                 <img src="images/a-propos-de-nous (1).png" id = "bla" alt="">
                             </div>
-                            <p><?=$datas["menu"][5]?></p>
+                            <p><?=$datas["menu"][6]?></p>
                         </a>
                     </div>
                 </div>
@@ -439,6 +450,59 @@ if ($datas === null) {
         </div>
 
 
+        <div id = "projets" onvisible = "actuelle_div(this.id)">
+            <div id= "div_for_scroll">
+                
+                <div id = "tous_les_projets">
+                
+                    <div class="rond"  onmouseover="affiche_details(12)" onmouseout="retire_details(12)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][0]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][0]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][0]["lien"]?>">Voir mon projet</a></p>
+                        </div>
+                    </div>
+
+                    <div class="rond"  onmouseover="affiche_details(13)" onmouseout="retire_details(13)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][1]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][1]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][0]["lien"]?>">Voir mon projet</a></p>
+                        </div>
+                    </div>
+
+                    <div class="rond"  onmouseover="affiche_details(14)" onmouseout="retire_details(14)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][2]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][2]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][2]["lien"]?>">Voir mon projet</a></p>
+                        </div>
+                    </div>
+
+
+                    
+                    
+               </div>
+
+                    
+            </div>
+
+        </div>
 
         <div id = "experiences" onvisible = "actuelle_div(this.id)">
 
@@ -447,7 +511,7 @@ if ($datas === null) {
 
                 <div id = "toutes_les_experiences">
 
-                    <div onmouseover="affiche_details(12)" onmouseout="retire_details(12)">
+                    <div onmouseover="affiche_details(15)" onmouseout="retire_details(15)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["experiences"][0]["poste_occupé"]?></p>
@@ -475,7 +539,7 @@ if ($datas === null) {
                         </div>
                     </div>
 
-                    <div onmouseover="affiche_details(13)" onmouseout="retire_details(13)">
+                    <div onmouseover="affiche_details(16)" onmouseout="retire_details(16)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["experiences"][1]["poste_occupé"]?></p>
@@ -504,7 +568,7 @@ if ($datas === null) {
                     </div>
 
 
-                    <div onmouseover="affiche_details(14)" onmouseout="retire_details(14)">
+                    <div onmouseover="affiche_details(17)" onmouseout="retire_details(17)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["experiences"][2]["poste_occupé"]?></p>
