@@ -175,7 +175,7 @@ if ($datas === null) {
                 
                 <div id = "toutes_les_formations">
                 
-                    <div onmouseover="affiche_details(0)" onmouseout="retire_details(0)">
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["formations"][0]["nom_formation"]?></p>
@@ -203,7 +203,7 @@ if ($datas === null) {
                         </div>
                     </div>
 
-                    <div onmouseover="affiche_details(1)" onmouseout="retire_details(1)">
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["formations"][1]["nom_formation"]?></p>
@@ -232,7 +232,7 @@ if ($datas === null) {
                     </div>
 
 
-                    <div onmouseover="affiche_details(2)" onmouseout="retire_details(2)">
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["formations"][2]["nom_formation"]?></p>
@@ -261,7 +261,7 @@ if ($datas === null) {
                     </div>
 
 
-                    <div onmouseover="affiche_details(3)" onmouseout="retire_details(3)">
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["formations"][3]["nom_formation"]?></p>
@@ -301,8 +301,43 @@ if ($datas === null) {
             <div id= "div_for_scroll">
                 
                 <div id = "toutes_les_competences">
+
+                    <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" class="title_scroll">GIT</p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;width:100%">Développement - Sauvegardes</p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><?=$datas["progressions"][8]?></p>
+                            <div id ="pourcentage">
+                                <div style="width:<?=$datas["progressions"][8]?>"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;">JAVA</p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;width:100%">Développement</p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><?=$datas["progressions"][10]?></p>
+                            <div id ="pourcentage">
+                                <div style="width:<?=$datas["progressions"][10]?>"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
                 
-                    <div class="rond"  onmouseover="affiche_details(4)" onmouseout="retire_details(4)">
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin;">HTML, CSS</p>
@@ -319,7 +354,7 @@ if ($datas === null) {
                         </div>
                     </div>
 
-                    <div  class="rond" onmouseover="affiche_details(5)" onmouseout="retire_details(5)">
+                    <div  class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin">PHP</p>
@@ -337,7 +372,7 @@ if ($datas === null) {
                     </div>
 
 
-                    <div class="rond"  onmouseover="affiche_details(6)" onmouseout="retire_details(6)">
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin">JS</p>
@@ -355,7 +390,7 @@ if ($datas === null) {
                     </div>
 
 
-                    <div class="rond" onmouseover="affiche_details(7)" onmouseout="retire_details(7)">
+                    <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div id="visible" class="rond">
                             <div>
                                 <p id="onglet_formations" class="title_scroll">SQL</p>
@@ -372,7 +407,39 @@ if ($datas === null) {
                         </div>
                     </div>
 
-                    <div class="rond" onmouseover="affiche_details(8)" onmouseout="retire_details(8)">
+                    <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" class="title_scroll">KOTLIN</p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;width:100%">Développement</p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><?=$datas["progressions"][12]?></p>
+                            <div id ="pourcentage">
+                                <div style="width:<?=$datas["progressions"][12]?>"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" class="title_scroll">SYMFONY</p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;width:100%">Framework</p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><?=$datas["progressions"][11]?></p>
+                            <div id ="pourcentage">
+                                <div style="width:<?=$datas["progressions"][11]?>"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div id="visible" class="rond">
                             <div>
                                 <p id="onglet_formations" class="title_scroll">BABYLONE JS 3D</p>
@@ -390,7 +457,7 @@ if ($datas === null) {
                         </div>
                     </div>
 
-                    <div class="rond" onmouseover="affiche_details(9)" onmouseout="retire_details(9)">
+                    <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" class="title_scroll">PYTHON</p>
@@ -407,8 +474,25 @@ if ($datas === null) {
                         </div>
                     </div>
 
+                    <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" class="title_scroll">SCSS</p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;width:100%">Développement - Respect des normes</p>
+                            </div>
+                        </div>
 
-                    <div class="rond" onmouseover="affiche_details(10)" onmouseout="retire_details(10)">
+                        <div id="invisible">
+                            <p><?=$datas["progressions"][9]?></p>
+                            <div id ="pourcentage">
+                                <div style="width:<?=$datas["progressions"][9]?>"></div>
+                            </div>
+                            <a href="projets/scss/scss.html">Voir les photos</a>
+                        </div>
+                    </div>
+
+
+                    <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" class="title_scroll">ANGLAIS</p>
@@ -425,7 +509,7 @@ if ($datas === null) {
                         </div>
                     </div>
 
-                    <div class="rond" onmouseover="affiche_details(11)" onmouseout="retire_details(11)">
+                    <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" class="title_scroll">ESPAGNOL</p>
@@ -454,8 +538,91 @@ if ($datas === null) {
             <div id= "div_for_scroll">
                 
                 <div id = "tous_les_projets">
-                
-                    <div class="rond"  onmouseover="affiche_details(12)" onmouseout="retire_details(12)">
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][9]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][9]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][9]["lien"]?>">Voir les photos</a></p>
+                        </div>
+                    </div>
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][7]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][7]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][7]["lien"]?>">Voir les photos</a></p>
+                        </div>
+                    </div>
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][8]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][8]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][8]["lien"]?>">Voir les photos</a></p>
+                        </div>
+                    </div>
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][6]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][6]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][6]["lien"]?>">Voir les photos</a></p>
+                        </div>
+                    </div>
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][5]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][5]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][5]["lien"]?>">Voir les photos</a></p>
+                        </div>
+                    </div>
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][4]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][4]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][4]["lien"]?>">Voir les photos</a></p>
+                        </div>
+                    </div>
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div class="rond" id="visible">
+                            <div>
+                                <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][3]["nom"]?></p>
+                                <p style="font-size:2vmin;margin-top:0px;margin-left:1.5%;"><?=$datas["projets"][3]["domaine"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <p><a href="<?=$datas["projets"][3]["lien"]?>">Voir les photos</a></p>
+                        </div>
+                    </div>
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][0]["nom"]?></p>
@@ -468,7 +635,7 @@ if ($datas === null) {
                         </div>
                     </div>
 
-                    <div class="rond"  onmouseover="affiche_details(13)" onmouseout="retire_details(13)">
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][1]["nom"]?></p>
@@ -477,11 +644,11 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><a href="<?=$datas["projets"][0]["lien"]?>">Voir mon projet</a></p>
+                            <p><a href="<?=$datas["projets"][1]["lien"]?>">Voir mon projet</a></p>
                         </div>
                     </div>
 
-                    <div class="rond"  onmouseover="affiche_details(14)" onmouseout="retire_details(14)">
+                    <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin;"><?=$datas["projets"][2]["nom"]?></p>
@@ -511,7 +678,7 @@ if ($datas === null) {
 
                 <div id = "toutes_les_experiences">
 
-                    <div onmouseover="affiche_details(15)" onmouseout="retire_details(15)">
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["experiences"][0]["poste_occupé"]?></p>
@@ -539,7 +706,7 @@ if ($datas === null) {
                         </div>
                     </div>
 
-                    <div onmouseover="affiche_details(16)" onmouseout="retire_details(16)">
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["experiences"][1]["poste_occupé"]?></p>
@@ -568,7 +735,7 @@ if ($datas === null) {
                     </div>
 
 
-                    <div onmouseover="affiche_details(17)" onmouseout="retire_details(17)">
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div id="visible">
                             <div>
                                 <p id="onglet_formations" style="font-size:7vmin"><?=$datas["experiences"][2]["poste_occupé"]?></p>
@@ -659,7 +826,7 @@ if ($datas === null) {
 
         <div id = "a_propos" onvisible = "actuelle_div(this.id)">
             <img src="fichiers/fotor-ai-2023121011127.jpg" alt="">
-            <p>Je suis étudiante en BTS SIO option SLAM. <br><br>J'ai 18 ans, et j'aimerais beaucoup devenir développeuse fullstack. J'aime faire tout ce qui touche au développement infomatique. <br><br>J'aime apprendre de nouvelles choses, et si vous me demandez quelque chose que je ne sais pas encore faire, pas de problèmes, je serai ravie d'apprendre de nouvelles choses et d'augmenter mon champ de compétences! Je travaille avec tout le monde, startup, PME, TPME...</p>
+            <p>Je suis étudiante en BTS SIO option SLAM. <br><br>J'ai 19 ans, et je suis développeuse fullstack. J'aime faire tout ce qui touche au développement infomatique. <br><br>J'aime apprendre de nouvelles choses, et si vous me demandez quelque chose que je ne sais pas encore faire, pas de problèmes, je serai ravie d'apprendre de nouvelles choses et d'augmenter mon champ de compétences! Je travaille avec tout le monde, startup, PME, TPME...</p>
         </div>
 
         <script src="js/index2.js"></script>

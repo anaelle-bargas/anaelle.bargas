@@ -109,20 +109,20 @@ function check_passionnee(){
 
 }
 
-function affiche_details(i, width="0", i_pourcentage=0){
-  document.querySelectorAll("#visible")[i].style.animation="disparition 0.3s 0s ease-in-out forwards";
-  document.querySelectorAll("#visible")[i].style.display="none";
-  document.querySelectorAll("#invisible")[i].style.animation="apparition 1s 0.0s ease-in-out forwards";
-  document.querySelectorAll("#invisible")[i].style.display="flex";
+function affiche_details(elem){
+  elem.querySelector("#visible").style.animation="disparition 0.3s 0s ease-in-out forwards";
+  elem.querySelector("#visible").style.display="none";
+  elem.querySelector("#invisible").style.animation="apparition 1s 0.0s ease-in-out forwards";
+  elem.querySelector("#invisible").style.display="flex";
 }
 
 
-function retire_details(i){
+function retire_details(elem){
 
-  document.querySelectorAll("#visible")[i].style.animation="apparition 0.3s 0.0s ease-in-out forwards";
-  document.querySelectorAll("#visible")[i].style.display="flex";
-  document.querySelectorAll("#invisible")[i].style.animation="disparition 1s 0.0s ease-in-out forwards";
-  document.querySelectorAll("#invisible")[i].style.display="none";
+  elem.querySelector("#visible").style.animation="apparition 0.3s 0.0s ease-in-out forwards";
+  elem.querySelector("#visible").style.display="flex";
+  elem.querySelector("#invisible").style.animation="disparition 1s 0.0s ease-in-out forwards";
+  elem.querySelector("#invisible").style.display="none";
 
 
 }

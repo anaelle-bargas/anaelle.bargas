@@ -74,13 +74,18 @@ formations:
 
 progressions:
   - 80%
-  - 60%
-  - 85%
-  - 75%
   - 80%
   - 90%
   - 80%
-  - 50%
+  - 80%
+  - 90%
+  - 80%
+  - 60%
+  - 80%
+  - 60%
+  - 80%
+  - 70%
+  - 70%
 
 
 projets:
@@ -93,6 +98,27 @@ projets:
   - nom: Temple de Jérusalem
     lien: https://playground.babylonjs.com/#F8EJ0Z#70
     domaine: Babylon JS
+  - nom: Hotline chez Léonard Solutions
+    lien: ./projets/hotline/hotline.html
+    domaine: Répondre aux incidents et demandes d’assistance et d’évolution
+  - nom: Site de visualisation 3D de projets clients
+    domaine: JS, PHP, HTML, CSS, SCSS
+    lien: ./projets/site_visualisation/site_visualisation.html
+  - nom: Objets dynamiques 3D
+    domaine: Babylon JS
+    lien: ./projets/objets3D/objets3D.html
+  - nom: Boutons Châssis
+    domaine: Babylon JS
+    lien: ./projets/boutonsChassis/boutonsChassis.html
+  - nom: Api Azurimmo
+    domaine: Java - Springboot
+    lien: ./projets/apiAzurImmo/apiAzurImmo.html
+  - nom: Application Azurimmo
+    domaine: Kotlin
+    lien: ./projets/appliAzurImmo/appliAzurImmo.html
+  - nom : BudgetApp
+    domaine: Symfony
+    lien: ./projets/budgetApp/budgetApp.html
 
 experiences:
   - poste_occupé: Coiffeuse Stagiaire
