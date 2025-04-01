@@ -276,6 +276,16 @@ video{
     background-size: 80%;
     background-origin: border-box;
     background-position: center;
+}
+
+#gitHub{
+    background-image: url("./../images/github.png");
+    width:100%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-origin: border-box;
+    background-position: center;
     
     
 }
@@ -350,14 +360,14 @@ video{
     z-index: 0;
 }
 
-#title{
+.title{
     font-size:10vmin;
     font-family:'Bodoni Moda', serif;
     padding-top: 0px;
     margin-top: 0%;
 }
 
-#onglet_formations{
+#onglet_formations, #onglet_competences{
     font-size:3vmin;
     font-family:'Bodoni Moda', serif;
     padding-top: 0px;
@@ -383,7 +393,7 @@ video{
 
 
 
-#formations, #competences, #experiences, #projets{
+#formations, #competences, #experiences, #projets, #aptitudes{
     display:flex;
     align-items: center;
     justify-content: flex-start;
@@ -406,7 +416,7 @@ video{
     align-items: center; */
     justify-content: flex-start;
 }
-#toutes_les_formations, #toutes_les_competences, #toutes_les_experiences, #tous_les_projets{
+#toutes_les_formations, #toutes_les_competences, #toutes_les_experiences, #tous_les_projets, #toutes_les_aptitudes{
     height:auto;
     width:120%;
     padding: 4%;
@@ -454,7 +464,7 @@ video{
 #invisible>*, #visible>*{
     padding-left:1.5%;
 }
-#toutes_les_formations>div, #toutes_les_competences>div, #toutes_les_experiences>div, #tous_les_projets>div{
+#toutes_les_formations>div, #toutes_les_competences>div, #toutes_les_experiences>div, #tous_les_projets>div, #toutes_les_aptitudes>div{
     border-radius: 15px;
     min-width: 455px;
     max-width: 455px;
@@ -467,7 +477,7 @@ video{
 
 
 
-#toutes_les_formations>div>div>p, #toutes_les_competences>div>div>p, #toutes_les_experiences>div>div>p, #tous_les_projets>div>div>p{
+#toutes_les_formations>div>div>p, #toutes_les_competences>div>div>p, #toutes_les_experiences>div>div>p, #tous_les_projets>div>div>p, #toutes_les_aptitudes>div>div>p{
     margin:2%;
 }
 

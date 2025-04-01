@@ -57,11 +57,12 @@ if ($datas === null) {
                 <div id="menu">
                     <a href="#accueil"><p><?=$datas["menu"][0]?></p></a>
                     <a href="#formations"><p><?=$datas["menu"][1]?></p></a>
-                    <a href="#competences"><p><?=$datas["menu"][2]?></p></a>
+                    <a href="#aptitudes"><p><?=$datas["menu"][2]?></p></a>
                     <a href="#projets"><p><?=$datas["menu"][3]?></p></a>
                     <a href="#experiences"><p><?=$datas["menu"][4]?></p></a>
-                    <a href="#contact"><p><?=$datas["menu"][5]?></p></a>
-                    <a href="#a_propos"><p><?=$datas["menu"][6]?></p></a>
+                    <a href="#competences"><p><?=$datas["menu"][5]?></p></a>
+                    <a href="#contact"><p><?=$datas["menu"][6]?></p></a>
+                    <a href="#a_propos"><p><?=$datas["menu"][7]?></p></a>
                 </div>
                 <div id = "centre_gauche"></div>
                 <DIV id = "presentation">
@@ -71,6 +72,7 @@ if ($datas === null) {
                     <p id = "metier"><?=$datas["moi"]["metier"]?></p>
                     <div id = "reseaux_presentation">
                         <a href="https://www.linkedin.com/in/ana%C3%ABlle-bargas-980911255"><div id = "linkedIn"></div></a>
+                        <a href="https://github.com/anaelle-bargas"><div id = "gitHub"></div></a>
                     </div>
                 </DIV>
                 <div id = "centre_droite">
@@ -90,10 +92,10 @@ if ($datas === null) {
                             <p><?=$datas["menu"][1]?></p>
                         </a>
                     </div>
-                    <div id = "div_competences">
-                        <a onclick = "onglets_sur_le_cote()" href="#competences">
+                    <div id = "div_aptitudes">
+                        <a onclick = "onglets_sur_le_cote()" href="#aptitudes">
                             <div >
-                                <img src="images/competence.png" id = "bla" alt="">
+                                <img src="images/aptitude.png" id = "bla" alt="">
                             </div>
                             <p><?=$datas["menu"][2]?></p>
                         </a>
@@ -117,13 +119,22 @@ if ($datas === null) {
                             <p><?=$datas["menu"][4]?></p>
                         </a>
                     </div>
+
+                    <div id = "div_competences">                    
+                        <a onclick = "onglets_sur_le_cote()" href="#competences">
+                            <div >
+                                <img src="images/competences.png" id = "bla" alt="">
+                            </div>
+                            <p><?=$datas["menu"][5]?></p>
+                        </a>
+                    </div>
                     
                     <div id = "div_contact">                    
                         <a onclick = "onglets_sur_le_cote()" href="#contact">
                             <div >
                                 <img src="images/e-mail.png" id = "bla" alt="">
                             </div>
-                            <p><?=$datas["menu"][5]?></p>
+                            <p><?=$datas["menu"][6]?></p>
                         </a>
                     </div>
                     
@@ -132,7 +143,7 @@ if ($datas === null) {
                             <div >
                                 <img src="images/a-propos-de-nous (1).png" id = "bla" alt="">
                             </div>
-                            <p><?=$datas["menu"][6]?></p>
+                            <p><?=$datas["menu"][7]?></p>
                         </a>
                     </div>
                 </div>
@@ -149,7 +160,7 @@ if ($datas === null) {
                     
             <div id = "paroles">
                 <div id = "qui">
-                    <p id = "title"><?=$datas["moi"]["accueil_title"]?></p>
+                    <p class = "title"><?=$datas["moi"]["accueil_title"]?></p>
                     <p><?=$datas["moi"]["accueil_p1"]?></p>
     
                 </div>
@@ -297,10 +308,10 @@ if ($datas === null) {
         </div>
 
 
-        <div id = "competences" onvisible = "actuelle_div(this.id)">
+        <div id = "aptitudes" onvisible = "actuelle_div(this.id)">
             <div id= "div_for_scroll">
                 
-                <div id = "toutes_les_competences">
+                <div id = "toutes_les_aptitudes">
 
                     <div class="rond" onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
@@ -547,7 +558,8 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><a href="<?=$datas["projets"][9]["lien"]?>">Voir les photos</a></p>
+                            <p><a href="<?=$datas["projets"][9]["lien"]?>">Voir le code</a></p>
+                            <p><a href="<?=$datas["projets"][9]["photos"]?>">Voir les photos</a></p>
                         </div>
                     </div>
                     <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
@@ -559,7 +571,7 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><a href="<?=$datas["projets"][7]["lien"]?>">Voir les photos</a></p>
+                            <p><a href="<?=$datas["projets"][7]["lien"]?>">Voir le code</a></p>
                         </div>
                     </div>
                     <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
@@ -571,7 +583,8 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><a href="<?=$datas["projets"][8]["lien"]?>">Voir les photos</a></p>
+                            <p><a href="<?=$datas["projets"][8]["lien"]?>">Voir le code</a></p>
+                            <p><a href="<?=$datas["projets"][8]["photos"]?>">Voir les photos</a></p>
                         </div>
                     </div>
                     <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
@@ -778,6 +791,172 @@ if ($datas === null) {
 
 
             </div>
+
+        </div>
+
+
+        <div id = "competences" onvisible = "actuelle_div(this.id)">
+
+            <div id= "div_for_scroll">
+                
+                <div id = "toutes_les_competences">
+                
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div id="visible">
+                            <div>
+                                <p id="onglet_competences" style="font-size:7vmin"><?=$datas["competences"][0]["libelle"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][1]?></p>
+                                <p><?=$datas["competences"][0]["points_appliques"]?>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][2]?></p>
+                                <p><?=$datas["competences"][0]["explications"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][3]?></p>
+                                <p><a href ="<?=$datas["competences"][0]["preuves"]?>">Site Visualisation</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div id="visible">
+                            <div>
+                                <p id="onglet_competences" style="font-size:7vmin"><?=$datas["competences"][1]["libelle"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][1]?></p>
+                                <p><?=$datas["competences"][1]["points_appliques"]?>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][2]?></p>
+                                <p><?=$datas["competences"][1]["explications"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][3]?></p>
+                                <p><a href ="<?=$datas["competences"][1]["preuves"]?>">Hotline</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div id="visible">
+                            <div>
+                                <p id="onglet_competences" style="font-size:7vmin"><?=$datas["competences"][2]["libelle"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][1]?></p>
+                                <p><?=$datas["competences"][2]["points_appliques"]?>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][2]?></p>
+                                <p><?=$datas["competences"][2]["explications"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][3]?></p>
+                                <p><a href ="<?=$datas["competences"][2]["preuves"]?>">SCSS</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div id="visible">
+                            <div>
+                                <p id="onglet_competences" style="font-size:7vmin"><?=$datas["competences"][3]["libelle"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][1]?></p>
+                                <p><?=$datas["competences"][3]["points_appliques"]?>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][2]?></p>
+                                <p><?=$datas["competences"][3]["explications"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][3]?></p>
+                                <p><a href ="<?=$datas["competences"][3]["preuves"]?>">Réunions</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div id="visible">
+                            <div>
+                                <p id="onglet_competences" style="font-size:7vmin"><?=$datas["competences"][4]["libelle"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][1]?></p>
+                                <p><?=$datas["competences"][4]["points_appliques"]?>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][2]?></p>
+                                <p><?=$datas["competences"][4]["explications"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][3]?></p>
+                                <p><a href ="<?=$datas["competences"][4]["preuves1"]?>">Hotline</a></p>
+                                <p><a href ="<?=$datas["competences"][4]["preuves2"]?>">Tests</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div id="visible">
+                            <div>
+                                <p id="onglet_competences" style="font-size:7vmin"><?=$datas["competences"][5]["libelle"]?></p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][1]?></p>
+                                <p><?=$datas["competences"][5]["points_appliques"]?>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][2]?></p>
+                                <p><?=$datas["competences"][5]["explications"]?></p>
+                            </div>
+                            <div>
+                                <p id="onglet_competences"><?=$datas["onglets_competences"][3]?></p>
+                                <p><a href ="<?=$datas["competences"][5]["preuves1"]?>">Auto-formation</a></p>
+                                <p><a href ="<?=$datas["competences"][5]["preuves1"]?>">Veille</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                    
+            </div> 
 
         </div>
 
