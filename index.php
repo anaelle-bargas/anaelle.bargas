@@ -946,7 +946,7 @@ if ($datas === null) {
                             <div>
                                 <p id="onglet_competences"><?=$datas["onglets_competences"][3]?></p>
                                 <p><a href ="<?=$datas["competences"][5]["preuves1"]?>">Auto-formation</a></p>
-                                <p><a href ="<?=$datas["competences"][5]["preuves1"]?>">Veille</a></p>
+                                <p><a href ="<?=$datas["competences"][5]["preuves2"]?>">Veille</a></p>
                             </div>
 
                         </div>
