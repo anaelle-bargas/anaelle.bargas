@@ -953,6 +953,23 @@ if ($datas === null) {
                     </div>
 
 
+
+                    <div onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
+                        <div id="visible">
+                            <div>
+                                <p id="onglet_competences" style="font-size:7vmin">Fichier Excel des compétences</p>
+                            </div>
+                        </div>
+
+                        <div id="invisible">
+                            <div>
+                                <p id="onglet_competences"><a href="./fichiers/competences.xlsx">Accéder au fichier Excel des compétences</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
                 </div>
 
                     
