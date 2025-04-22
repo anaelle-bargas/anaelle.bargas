@@ -571,8 +571,9 @@ if ($datas === null) {
                         </div>
 
                         <div id="invisible">
-                            <p><a href="<?=$datas["projets"][7]["lien"]?>">Voir le code</a></p>
-                        </div>
+                            <p><a href="<?=$datas["projets"][7]["lien_code"]?>">Voir le code</a></p>
+                            <p><a href="<?=$datas["projets"][7]["lien"]?>">Voir le site</a></p>
+                            </div>
                     </div>
                     <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">
                         <div class="rond" id="visible">
@@ -584,7 +585,6 @@ if ($datas === null) {
 
                         <div id="invisible">
                             <p><a href="<?=$datas["projets"][8]["lien_code"]?>">Voir le code</a></p>
-                            <p><a href="<?=$datas["projets"][8]["lien"]?>">Voir le site</a></p>
                         </div>
                     </div>
                     <div class="rond"  onmouseover="affiche_details(this)" onmouseout="retire_details(this)">

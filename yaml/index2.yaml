@@ -174,12 +174,12 @@ projets:
     lien: ./projets/boutonsChassis/boutonsChassis.html
   - nom: Api Azurimmo
     domaine: Java - Springboot
-    lien: https://github.com/anaelle-bargas/AzurImmoApi
+    lien_code: https://github.com/anaelle-bargas/AzurImmoApi
+    lien : http://api-srv2-vm-22106.sts-sio-caen.info/api/batiments/
   - nom: Application Azurimmo
     domaine: Kotlin
     photos: ./projets/appliAzurImmo/appliAzurImmo.html
     lien_code : https://github.com/anaelle-bargas/AzurImmo
-    lien : http://srv2-vm-22106.sts-sio-caen.info/budgetapp/public/
   - nom : BudgetApp
     domaine: Symfony
     photos: ./projets/budgetApp/budgetApp.html
