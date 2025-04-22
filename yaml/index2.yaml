@@ -178,11 +178,13 @@ projets:
   - nom: Application Azurimmo
     domaine: Kotlin
     photos: ./projets/appliAzurImmo/appliAzurImmo.html
-    lien : https://github.com/anaelle-bargas/AzurImmo
+    lien_code : https://github.com/anaelle-bargas/AzurImmo
+    lien : http://srv2-vm-22106.sts-sio-caen.info/budgetapp/public/
   - nom : BudgetApp
     domaine: Symfony
     photos: ./projets/budgetApp/budgetApp.html
-    lien : https://gitlab.com/caensup9475439/2-sio-slam/2024/sio-slam-alt-2024/fintrack/budgetapp
+    lien_code : http://srv2-vm-22106.sts-sio-caen.info/budgetapp/public/
+    lien : http://srv2-vm-22106.sts-sio-caen.info/budgetapp/public/
 
 experiences:
   - poste_occupé: Coiffeuse Stagiaire
