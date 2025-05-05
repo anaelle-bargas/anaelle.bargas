@@ -73,6 +73,7 @@ if ($datas === null) {
                     <div id = "reseaux_presentation">
                         <a href="https://www.linkedin.com/in/ana%C3%ABlle-bargas-980911255"><div id = "linkedIn"></div></a>
                         <a href="https://github.com/anaelle-bargas"><div id = "gitHub"></div></a>
+                        <a href="https://raindrop.io/anaelle-bargas/"><div id = "raindrop"></div></a>
                     </div>
                 </DIV>
                 <div id = "centre_droite">
