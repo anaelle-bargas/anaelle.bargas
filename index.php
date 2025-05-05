@@ -780,7 +780,7 @@ if ($datas === null) {
                     <div>
                         <div id="visible" style="background-color:#2130490d">
                             <div>
-                                <p id="onglet_formations" style="font-size:7vmin;text-align:center;"><a href="./../fichiers/Anaelle_Bargas_CV.pdf" target="_blanck">Voir mon cv</a></p>
+                                <p id="onglet_formations" style="font-size:7vmin;text-align:center;"><a href="./../fichiers/Anaelle Bargas - CV.pdf" target="_blanck">Voir mon cv</a></p>
                             </div>
                         </div>
                     </div>
