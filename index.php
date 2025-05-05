@@ -964,7 +964,7 @@ if ($datas === null) {
 
                         <div id="invisible">
                             <div>
-                                <p id="onglet_competences"><a href="./fichiers/competences.xlsx">Accéder au fichier Excel des compétences</a></p>
+                                <p id="onglet_competences"><a href="./fichiers/competences.pdf">Accéder au fichier des compétences attendues pour le BTS</a></p>
                             </div>
 
                         </div>
